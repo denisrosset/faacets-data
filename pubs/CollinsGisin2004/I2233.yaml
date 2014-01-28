@@ -1,0 +1,19 @@
+type: Inequality
+bra:
+  scenario: '{[3 3] [3 3]}'
+  representation: Non-signaling Collins-Gisin
+  coefficients: [0, -1, -1, 0, 0, -1, 1, 1, 0, 1, -1, 1, 0, 1, 1, 0, 0, 1, 0, -1,
+    0, 1, 1, -1, -1]
+  generators:
+    outputPerm: ['A1(1,3,2) A2(1,3,2) B1(1,2,3) B2(1,2,3)']
+    outputInputPerm: ['A2(1,2,3) B1(1,3,2) A(1,2) B(1,2)', 'A1(1,3) A2(1,3) B1(2,3)
+        B2(1,3) A(1,2)']
+    partyPerm: ['(A,B)']
+  representatives: 432
+shortName: I2233
+names: ['Inequality I2233 defined in Collins, Gisin 2004']
+facetOf: {local: true}
+bounds: {local: x <= 0}
+sources:
+  bounds.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+  facetOf.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']

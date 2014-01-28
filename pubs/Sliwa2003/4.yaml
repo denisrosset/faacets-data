@@ -1,0 +1,18 @@
+type: Inequality
+bra:
+  scenario: '{[2 2] [2 2] [2 2]}'
+  representation: Non-signaling Correlators
+  coefficients: [2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 1, 0, -1, 1, 0, 0, 0, 0,
+    -1, 1, 0, 1, -1, 0]
+  generators:
+    liftings: ['A2(1,2)']
+    outputPerm: ['B1(1,2) B2(1,2) C1(1,2) C2(1,2)']
+    outputInputPerm: ['B2(1,2) C(1,2)', 'C2(1,2) B(1,2)']
+    partyPerm: ['(B,C)']
+  representatives: 96
+names: ['C. Sliwa tripartite inequality #4']
+facetOf: {local: true}
+bounds: {local: x >= 0}
+sources:
+  facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+  bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']

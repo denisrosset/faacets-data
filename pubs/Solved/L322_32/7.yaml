@@ -1,0 +1,16 @@
+type: Inequality
+bra:
+  scenario: '{[3 2 2] [3 2]}'
+  representation: Non-signaling Correlators
+  coefficients: [0, 2, 4, -3, -3, -4, -8, -16, -6, -6, -2, -4, -8, -12, 6, -6, 6,
+    12, -9, -9]
+  generators:
+    liftings: ['A1(1,2)']
+    outputInputPerm: ['B1(2,3) A(2,3)']
+  representatives: 144
+names: ['Local facet in {[3 2 2] [3 2]} solved by SymPol.']
+facetOf: {local: true}
+bounds: {local: x <= 26}
+sources:
+  facetOf.local: [sympol]
+  bounds.local: [sympol]

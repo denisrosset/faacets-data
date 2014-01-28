@@ -1,0 +1,15 @@
+type: Inequality
+bra:
+  scenario: '{[2 2] [2 2] [2 2]}'
+  representation: Non-signaling Correlators
+  coefficients: [0, 3, -1, 0, 1, 1, 0, -2, -2, 0, -1, -1, -2, 3, -1, -2, 2, -2, 0,
+    -2, -2, 2, -2, 2, -2, 2, -2]
+  generators:
+    rest: ['B1(1,2) C1(1,2) (B,C)']
+  representatives: 1536
+names: ['Local facet in {[2 2] [2 2] [2 2]} solved by SymPol.']
+facetOf: {local: true}
+bounds: {local: x <= 8}
+sources:
+  facetOf.local: [sympol]
+  bounds.local: [sympol]

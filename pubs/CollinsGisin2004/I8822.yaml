@@ -1,0 +1,20 @@
+type: Inequality
+bra:
+  scenario: '{[2 2 2 2 2 2 2 2] [2 2 2 2 2 2 2 2]}'
+  representation: Non-signaling Collins-Gisin
+  coefficients: [0, -1, 0, 0, 0, 0, 0, 0, 0, -7, 1, 1, 1, 1, 1, 1, 1, 1, -6, 1, 1,
+    1, 1, 1, 1, 1, -1, -5, 1, 1, 1, 1, 1, 1, -1, 0, -4, 1, 1, 1, 1, 1, -1, 0, 0, -3,
+    1, 1, 1, 1, -1, 0, 0, 0, -2, 1, 1, 1, -1, 0, 0, 0, 0, -1, 1, 1, -1, 0, 0, 0, 0,
+    0, 0, 1, -1, 0, 0, 0, 0, 0, 0]
+  generators:
+    outputInputPerm: ['A8(1,2) B(1,2)', 'B8(1,2) A(1,2)']
+    rest: ['A1(1,2) A2(1,2) A3(1,2) A4(1,2) A5(1,2) A6(1,2) A7(1,2) B1(1,2) B2(1,2)
+        B3(1,2) B4(1,2) B5(1,2) B6(1,2) B7(1,2) A(1,2) B(1,2) (A,B)']
+  representatives: 26635508121600
+shortName: I8822
+names: ['Inequality I8822 defined in Collins, Gisin 2004']
+facetOf: {local: true}
+bounds: {local: x <= 0}
+sources:
+  bounds.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+  facetOf.local: ['doi:10.1016/j.dam.2007.03.005', 'arXiv:math/0505143']

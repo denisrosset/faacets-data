@@ -1,0 +1,19 @@
+type: Inequality
+bra:
+  scenario: '{[2 2] [2 2] [2 2]}'
+  representation: Non-signaling Correlators
+  coefficients: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, -1, 0, 0, 0,
+    0, 0, 1, 0, -1, 0]
+  generators:
+    outputPerm: ['A1(1,2) B2(1,2) C1(1,2)', 'A1(1,2) B1(1,2) C2(1,2)', 'A2(1,2) B2(1,2)
+        C2(1,2)']
+    outputInputPerm: ['B1(1,2) A(1,2) C(1,2)', 'C2(1,2) A(1,2) B(1,2)']
+    partyPerm: ['(A,C)']
+    rest: ['A2(1,2) (B,C)']
+  representatives: 16
+names: ['Local facet in {[2 2] [2 2] [2 2]} solved by SymPol.']
+facetOf: {local: true}
+bounds: {local: x <= 2}
+sources:
+  facetOf.local: [sympol]
+  bounds.local: [sympol]

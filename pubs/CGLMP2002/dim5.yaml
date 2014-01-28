@@ -1,0 +1,24 @@
+type: Inequality
+bra:
+  scenario: '{[5 5] [5 5]}'
+  representation: Signaling Probabilities
+  coefficients:
+    numerator: [2, 1, 0, -1, -2, -2, -1, 0, 1, 2, -2, 2, 1, 0, -1, 2, -2, -1, 0, 1,
+      -1, -2, 2, 1, 0, 1, 2, -2, -1, 0, 0, -1, -2, 2, 1, 0, 1, 2, -2, -1, 1, 0, -1,
+      -2, 2, -1, 0, 1, 2, -2, 2, -2, -1, 0, 1, 2, 1, 0, -1, -2, 1, 2, -2, -1, 0, -2,
+      2, 1, 0, -1, 0, 1, 2, -2, -1, -1, -2, 2, 1, 0, -1, 0, 1, 2, -2, 0, -1, -2, 2,
+      1, -2, -1, 0, 1, 2, 1, 0, -1, -2, 2]
+    denominator: 2
+  generators:
+    outputPerm: ['A1(1,2,3,4,5) A2(1,2,3,4,5) B1(1,2,3,4,5) B2(1,2,3,4,5)']
+    outputInputPerm: ['A2(1,2,3,4,5) B2(1,2,3,4,5) A(1,2) B(1,2)', 'A1(1,2)(3,5) A2(1,2)(3,5)
+        B1(1,3)(4,5) B2(1,2)(3,5) A(1,2)']
+    rest: ['A2(1,2,3,4,5) A(1,2) (A,B)']
+  representatives: 41472000
+shortName: CGLMP5
+names: [CGLMP inequality for 5 outcomes]
+facetOf: {local: true}
+bounds: {local: x <= 2}
+sources:
+  bounds.local: ['doi:10.1103/PhysRevLett.88.040404', 'arXiv:quant-ph/0106024']
+  facetOf.local: ['doi:10.1103/PhysRevLett.95.210402', 'arXiv:quant-ph/0506225']

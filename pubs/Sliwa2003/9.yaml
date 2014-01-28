@@ -1,0 +1,16 @@
+type: Inequality
+bra:
+  scenario: '{[2 2] [2 2] [2 2]}'
+  representation: Non-signaling Correlators
+  coefficients: [4, 0, 0, 0, -1, -1, 0, -1, -1, 0, 0, 0, 0, -2, 0, 0, 2, 0, 0, 0,
+    0, 0, -1, 1, 0, -1, 1]
+  generators:
+    outputPerm: ['A1(1,2) A2(1,2) B1(1,2) B2(1,2)']
+    outputInputPerm: ['C1(1,2) B(1,2)']
+  representatives: 768
+names: ['C. Sliwa tripartite inequality #9']
+facetOf: {local: true}
+bounds: {local: x >= 0}
+sources:
+  facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+  bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
