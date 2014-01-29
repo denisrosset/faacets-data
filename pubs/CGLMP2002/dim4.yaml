@@ -8,16 +8,21 @@ bra:
       3, -3, -1, -3, 3, 1, -1, -1, 1, 3, -3, -1, -3, 3, 1, -3, -1, 1, 3, 1, -1, -3,
       3]
     denominator: 3
-  generators:
-    outputPerm: ['A1(1,2,3,4) A2(1,2,3,4) B1(1,2,3,4) B2(1,2,3,4)']
-    outputInputPerm: ['A2(1,2,3,4) B2(1,2,3,4) A(1,2) B(1,2)', 'A1(1,3) A2(1,3) B1(1,4)(2,3)
-        B2(1,3) A(1,2)']
-    rest: ['A2(1,2,3,4) A(1,2) (A,B)']
-  representatives: 82944
 shortName: CGLMP4
 names: [CGLMP inequality for 4 outcomes]
-facetOf: {local: true}
 bounds: {local: x <= 2}
 sources:
   bounds.local: ['doi:10.1103/PhysRevLett.88.040404', 'arXiv:quant-ph/0106024']
   facetOf.local: ['doi:10.1103/PhysRevLett.95.210402', 'arXiv:quant-ph/0506225']
+symmetryInfo:
+  remarkableGenerators:
+    outputPerms: ['A1(1,2,3,4) A2(1,2,3,4) B1(1,2,3,4) B2(1,2,3,4)']
+    outputInputPerms: ['A2(1,2,3,4) B2(1,2,3,4) A(1,2) B(1,2)', 'A1(1,3) A2(1,3) B1(1,4)(2,3)
+        B2(1,3) A(1,2)']
+    rest: ['A2(1,2,3,4) A(1,2) (A,B)']
+  numberOfRepresentatives: 82944
+  orderOfLiftingSymmetryGroups: 1
+  orderOfOutputSymmetryGroup: 4
+  orderOfOutputInputSymmetryGroup: 16
+  orderOfPartySymmetryGroup: 1
+facetOf: {local: true}

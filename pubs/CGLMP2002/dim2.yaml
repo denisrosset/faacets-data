@@ -3,15 +3,20 @@ bra:
   scenario: '{[2 2] [2 2]}'
   representation: Signaling Probabilities
   coefficients: [1, -1, -1, 1, -1, 1, 1, -1, 1, -1, 1, -1, -1, 1, -1, 1]
-  generators:
-    outputPerm: ['A1(1,2) A2(1,2) B1(1,2) B2(1,2)']
-    outputInputPerm: ['A2(1,2) B(1,2)', 'B1(1,2) A(1,2)']
-    rest: ['A(1,2) B(1,2) (A,B)']
-  representatives: 8
 shortName: CGLMP2
 names: [CGLMP inequality for 2 outcomes]
-facetOf: {local: true}
 bounds: {local: x <= 2}
 sources:
   bounds.local: ['doi:10.1103/PhysRevLett.88.040404', 'arXiv:quant-ph/0106024']
   facetOf.local: ['doi:10.1103/PhysRevLett.95.210402', 'arXiv:quant-ph/0506225']
+symmetryInfo:
+  remarkableGenerators:
+    outputPerms: ['A1(1,2) A2(1,2) B1(1,2) B2(1,2)']
+    outputInputPerms: ['A2(1,2) B(1,2)', 'B1(1,2) A(1,2)']
+    rest: ['A(1,2) B(1,2) (A,B)']
+  numberOfRepresentatives: 8
+  orderOfLiftingSymmetryGroups: 1
+  orderOfOutputSymmetryGroup: 2
+  orderOfOutputInputSymmetryGroup: 8
+  orderOfPartySymmetryGroup: 1
+facetOf: {local: true}

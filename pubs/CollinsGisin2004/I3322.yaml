@@ -3,14 +3,19 @@ bra:
   scenario: '{[2 2 2] [2 2 2]}'
   representation: Non-signaling Collins-Gisin
   coefficients: [0, -1, 0, 0, -2, 1, 1, 1, -1, 1, 1, -1, 0, 1, -1, 0]
-  generators:
-    outputInputPerm: ['A3(1,2) B(1,2)', 'B3(1,2) A(1,2)']
-    rest: ['A1(1,2) A2(1,2) B1(1,2) B2(1,2) A(1,2) B(1,2) (A,B)']
-  representatives: 576
 shortName: I3322
 names: ['Inequality I3322 defined in Collins, Gisin 2004']
-facetOf: {local: true}
 bounds: {local: x <= 0}
 sources:
   bounds.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
   facetOf.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+symmetryInfo:
+  remarkableGenerators:
+    outputInputPerms: ['A3(1,2) B(1,2)', 'B3(1,2) A(1,2)']
+    rest: ['A1(1,2) A2(1,2) B1(1,2) B2(1,2) A(1,2) B(1,2) (A,B)']
+  numberOfRepresentatives: 576
+  orderOfLiftingSymmetryGroups: 1
+  orderOfOutputSymmetryGroup: 1
+  orderOfOutputInputSymmetryGroup: 4
+  orderOfPartySymmetryGroup: 1
+facetOf: {local: true}

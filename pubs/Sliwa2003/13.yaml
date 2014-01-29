@@ -4,13 +4,18 @@ bra:
   representation: Non-signaling Correlators
   coefficients: [4, 0, 0, 0, -2, -2, 0, 0, 0, 0, 0, 0, 0, -1, 1, 0, -1, 1, 0, 0, 0,
     0, -1, 1, 0, 1, -1]
-  generators:
-    outputPerm: ['A1(1,2) A2(1,2) B1(1,2) B2(1,2)']
-    outputInputPerm: ['B2(1,2) C(1,2)', 'C1(1,2) C2(1,2) A(1,2)']
-  representatives: 384
 names: ['C. Sliwa tripartite inequality #13']
-facetOf: {local: true}
 bounds: {local: x >= 0}
 sources:
   facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
   bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+symmetryInfo:
+  remarkableGenerators:
+    outputPerms: ['A1(1,2) A2(1,2) B1(1,2) B2(1,2)']
+    outputInputPerms: ['B2(1,2) C(1,2)', 'C1(1,2) C2(1,2) A(1,2)']
+  numberOfRepresentatives: 384
+  orderOfLiftingSymmetryGroups: 1
+  orderOfOutputSymmetryGroup: 2
+  orderOfOutputInputSymmetryGroup: 8
+  orderOfPartySymmetryGroup: 1
+facetOf: {local: true}

@@ -4,12 +4,17 @@ bra:
   representation: Non-signaling Correlators
   coefficients: [3, -1, 0, -1, -1, 0, 0, 0, 0, -1, 0, -1, 0, 1, 1, -1, 1, 0, 0, -1,
     1, 1, 0, -1, -1, 1, 0]
-  generators:
-    rest: ['C2(1,2) (A,B)']
-  representatives: 1536
 names: ['C. Sliwa tripartite inequality #6']
-facetOf: {local: true}
 bounds: {local: x >= 0}
 sources:
   facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
   bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+facetOf: {local: true}
+symmetryInfo:
+  remarkableGenerators:
+    rest: ['C2(1,2) (A,B)']
+  numberOfRepresentatives: 1536
+  orderOfLiftingSymmetryGroups: 1
+  orderOfOutputSymmetryGroup: 1
+  orderOfOutputInputSymmetryGroup: 1
+  orderOfPartySymmetryGroup: 1

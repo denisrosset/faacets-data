@@ -4,16 +4,21 @@ bra:
   representation: Signaling Probabilities
   coefficients: [1, 0, -1, -1, 0, 1, -1, 1, 0, 1, -1, 0, 0, -1, 1, 0, 1, -1, 1, -1,
     0, 1, 0, -1, 0, 1, -1, -1, 1, 0, -1, 0, 1, 0, -1, 1]
-  generators:
-    outputPerm: ['A1(1,2,3) A2(1,2,3) B1(1,2,3) B2(1,2,3)']
-    outputInputPerm: ['A1(1,3,2) B1(1,3,2) A(1,2) B(1,2)', 'A1(1,3) A2(1,3) B1(2,3)
-        B2(1,3) A(1,2)']
-    rest: ['A2(1,2,3) A(1,2) (A,B)']
-  representatives: 432
 shortName: CGLMP3
 names: [CGLMP inequality for 3 outcomes]
-facetOf: {local: true}
 bounds: {local: x <= 2}
 sources:
   bounds.local: ['doi:10.1103/PhysRevLett.88.040404', 'arXiv:quant-ph/0106024']
   facetOf.local: ['doi:10.1103/PhysRevLett.95.210402', 'arXiv:quant-ph/0506225']
+symmetryInfo:
+  remarkableGenerators:
+    outputPerms: ['A1(1,2,3) A2(1,2,3) B1(1,2,3) B2(1,2,3)']
+    outputInputPerms: ['A1(1,3,2) B1(1,3,2) A(1,2) B(1,2)', 'A1(1,3) A2(1,3) B1(2,3)
+        B2(1,3) A(1,2)']
+    rest: ['A2(1,2,3) A(1,2) (A,B)']
+  numberOfRepresentatives: 432
+  orderOfLiftingSymmetryGroups: 1
+  orderOfOutputSymmetryGroup: 3
+  orderOfOutputInputSymmetryGroup: 12
+  orderOfPartySymmetryGroup: 1
+facetOf: {local: true}

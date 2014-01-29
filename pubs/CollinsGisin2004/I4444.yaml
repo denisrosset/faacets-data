@@ -10,14 +10,19 @@ bra:
     0, 1, 1, 1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0,
     0, 1, 1, 0, -1, -1, 0, -1, -1, 0, -1, -1, 0, 1, 1, 1, -1, -1, -1, 0, 0, 0, 0,
     0, 0]
-  generators:
-    rest: ['A1(1,4,3,2) A2(1,4,3,2) A3(1,4,3,2) A4(1,4,3,2) B1(1,2,3,4) B2(1,2,3,4)
-        B3(1,2,3,4) B4(1,2,3,4) (A,B)']
-  representatives: 63403380965376
 shortName: I4444
 names: ['Inequality I4444 defined in Collins, Gisin 2004']
-facetOf: {local: true}
 bounds: {local: x <= 0}
 sources:
   bounds.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
   facetOf.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+symmetryInfo:
+  remarkableGenerators:
+    rest: ['A1(1,4,3,2) A2(1,4,3,2) A3(1,4,3,2) A4(1,4,3,2) B1(1,2,3,4) B2(1,2,3,4)
+        B3(1,2,3,4) B4(1,2,3,4) (A,B)']
+  numberOfRepresentatives: 63403380965376
+  orderOfLiftingSymmetryGroups: 1
+  orderOfOutputSymmetryGroup: 1
+  orderOfOutputInputSymmetryGroup: 1
+  orderOfPartySymmetryGroup: 1
+facetOf: {local: true}

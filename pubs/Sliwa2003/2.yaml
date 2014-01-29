@@ -4,16 +4,21 @@ bra:
   representation: Non-signaling Correlators
   coefficients: [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, -1, 0, 0, 0,
     0, 0, -1, 0, 1, 0]
-  generators:
-    outputPerm: ['A1(1,2) B2(1,2) C1(1,2)', 'A1(1,2) B1(1,2) C2(1,2)', 'A2(1,2) B2(1,2)
-        C2(1,2)']
-    outputInputPerm: ['B2(1,2) A(1,2) C(1,2)', 'C2(1,2) A(1,2) B(1,2)']
-    partyPerm: ['(B,C)']
-    rest: ['B2(1,2) (A,C)']
-  representatives: 16
 names: ['C. Sliwa tripartite inequality #2']
-facetOf: {local: true}
 bounds: {local: x >= 0}
 sources:
   facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
   bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+symmetryInfo:
+  remarkableGenerators:
+    outputPerms: ['A1(1,2) B2(1,2) C1(1,2)', 'A1(1,2) B1(1,2) C2(1,2)', 'A2(1,2) B2(1,2)
+        C2(1,2)']
+    outputInputPerms: ['B2(1,2) A(1,2) C(1,2)', 'C2(1,2) A(1,2) B(1,2)']
+    partyPerms: ['(B,C)']
+    rest: ['B2(1,2) (A,C)']
+  numberOfRepresentatives: 16
+  orderOfLiftingSymmetryGroups: 1
+  orderOfOutputSymmetryGroup: 8
+  orderOfOutputInputSymmetryGroup: 32
+  orderOfPartySymmetryGroup: 2
+facetOf: {local: true}
