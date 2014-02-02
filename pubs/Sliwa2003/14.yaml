@@ -4,11 +4,6 @@ bra:
   representation: Non-signaling Correlators
   coefficients: [4, 0, 0, 0, -2, -2, 0, 0, 0, 0, -1, 1, 0, 0, 0, 0, -1, 1, 0, -1,
     1, 0, 0, 0, 0, 1, -1]
-names: ['C. Sliwa tripartite inequality #14']
-bounds: {local: x >= 0}
-sources:
-  facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
-  bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
 symmetryInfo:
   remarkableGenerators:
     outputPerms: ['A1(1,2) A2(1,2) B1(1,2) C1(1,2) C2(1,2)']
@@ -18,4 +13,46 @@ symmetryInfo:
   orderOfOutputSymmetryGroup: 2
   orderOfOutputInputSymmetryGroup: 8
   orderOfPartySymmetryGroup: 1
+tags: [pure, simple]
+names: ['C. Sliwa tripartite inequality #14']
 facetOf: {local: true}
+bounds: {local: x >= 0}
+sources:
+  facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+  bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+decomposition:
+  type: RepresentationTransform
+  representation: Non-signaling Correlators
+  of:
+    type: ReverseTransform
+    of:
+      type: AffineTransform
+      affine: 1/2 x - 4
+      of:
+        type: PermutationTransform
+        permutation: C1(1,2) C2(1,2) (A,C)
+        of:
+          type: Inequality
+          bra:
+            scenario: '{[2 2] [2 2] [2 2]}'
+            representation: Non-signaling Probabilities
+            coefficients: [-3, -1, -3, -1, 1, 3, 1, 3, -3, 3, 1, -1, 1, -1, -3, 3,
+              3, 1, 3, 1, -1, -3, -1, -3, 3, -3, -1, 1, -1, 1, 3, -3, -1, -3, -1,
+              -3, 3, 1, 3, 1, 3, -3, -1, 1, -1, 1, 3, -3, 1, 3, 1, 3, -3, -1, -3,
+              -1, -3, 3, 1, -1, 1, -1, -3, 3]
+          symmetryInfo:
+            remarkableGenerators:
+              outputPerms: ['A1(1,2) A2(1,2) B1(1,2) C1(1,2) C2(1,2)']
+              outputInputPerms: ['A1(1,2) A2(1,2) C(1,2)', 'B2(1,2) A(1,2)']
+            numberOfRepresentatives: 384
+            orderOfLiftingSymmetryGroups: 1
+            orderOfOutputSymmetryGroup: 2
+            orderOfOutputInputSymmetryGroup: 8
+            orderOfPartySymmetryGroup: 1
+          tags: [pure, simple, minimal]
+          names: ['C. Sliwa tripartite inequality #14']
+          facetOf: {local: true}
+          bounds: {local: x <= 8}
+          sources:
+            facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+            bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']

@@ -1,0 +1,17 @@
+type: Inequality
+bra:
+  scenario: '{[2]}'
+  representation: Non-signaling Probabilities
+  coefficients: [-1, 1]
+symmetryInfo:
+  remarkableGenerators: {}
+  numberOfRepresentatives: 2
+  orderOfLiftingSymmetryGroups: 1
+  orderOfOutputSymmetryGroup: 1
+  orderOfOutputInputSymmetryGroup: 1
+  orderOfPartySymmetryGroup: 1
+tags: [pure, simple, minimal]
+shortName: Positivity
+names: [Positivity inequality]
+facetOf: {local: true}
+bounds: {local: x <= 1, quantum: x <= 1}

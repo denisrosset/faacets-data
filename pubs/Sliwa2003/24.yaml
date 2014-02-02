@@ -4,11 +4,6 @@ bra:
   representation: Non-signaling Correlators
   coefficients: [5, -1, 0, -1, 0, -1, 0, -1, -1, -1, 0, -1, 1, -2, 1, 0, 0, 2, 0,
     -1, -1, 0, 0, 2, 0, 1, -1]
-names: ['C. Sliwa tripartite inequality #24']
-bounds: {local: x >= 0}
-sources:
-  facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
-  bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
 symmetryInfo:
   remarkableGenerators:
     partyPerms: ['(B,C)']
@@ -17,4 +12,45 @@ symmetryInfo:
   orderOfOutputSymmetryGroup: 1
   orderOfOutputInputSymmetryGroup: 1
   orderOfPartySymmetryGroup: 2
+tags: [pure, simple]
+names: ['C. Sliwa tripartite inequality #24']
 facetOf: {local: true}
+bounds: {local: x >= 0}
+sources:
+  facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+  bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+decomposition:
+  type: RepresentationTransform
+  representation: Non-signaling Correlators
+  of:
+    type: ReverseTransform
+    of:
+      type: AffineTransform
+      affine: 1/4 x - 5
+      of:
+        type: PermutationTransform
+        permutation: A1(1,2) B1(1,2) C1(1,2)
+        of:
+          type: Inequality
+          bra:
+            scenario: '{[2 2] [2 2] [2 2]}'
+            representation: Non-signaling Probabilities
+            coefficients: [-13, 5, -12, 4, 9, -5, 6, -2, -4, 2, 7, -9, 0, -2, -13,
+              11, 9, -5, 6, -2, -9, 9, 0, 0, -2, 4, -3, 5, 2, 0, 9, -7, -4, 2, 7,
+              -9, -2, 4, -3, 5, -1, 1, 8, -8, -5, 5, -4, 4, 0, -2, -13, 11, 2, 0,
+              9, -7, -5, 5, -4, 4, 7, -7, 0, 0]
+          symmetryInfo:
+            remarkableGenerators:
+              partyPerms: ['(B,C)']
+            numberOfRepresentatives: 1536
+            orderOfLiftingSymmetryGroups: 1
+            orderOfOutputSymmetryGroup: 1
+            orderOfOutputInputSymmetryGroup: 1
+            orderOfPartySymmetryGroup: 2
+          tags: [pure, simple, minimal]
+          names: ['C. Sliwa tripartite inequality #24']
+          facetOf: {local: true}
+          bounds: {local: x <= 20}
+          sources:
+            facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+            bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']

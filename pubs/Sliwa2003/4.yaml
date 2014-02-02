@@ -4,11 +4,6 @@ bra:
   representation: Non-signaling Correlators
   coefficients: [2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 1, 0, -1, 1, 0, 0, 0, 0,
     -1, 1, 0, 1, -1, 0]
-names: ['C. Sliwa tripartite inequality #4']
-bounds: {local: x >= 0}
-sources:
-  facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
-  bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
 symmetryInfo:
   remarkableGenerators:
     liftings: ['A2(1,2)']
@@ -20,4 +15,61 @@ symmetryInfo:
   orderOfOutputSymmetryGroup: 4
   orderOfOutputInputSymmetryGroup: 16
   orderOfPartySymmetryGroup: 2
+tags: [degenerate, composite]
+names: ['C. Sliwa tripartite inequality #4']
 facetOf: {local: true}
+bounds: {local: x >= 0}
+sources:
+  facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+  bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+decomposition:
+  type: RepresentationTransform
+  representation: Non-signaling Correlators
+  of:
+    type: LiftingTransform
+    lifting: Lifting({[2]+[2] [2 2] [2 2]})
+    of:
+      type: InequalityProduct
+      of:
+      - type: AffineTransform
+        affine: x - 1
+        of:
+          type: PermutationTransform
+          permutation: A1(1,2)
+          of:
+            type: Inequality
+            bra:
+              scenario: '{[2]}'
+              representation: Non-signaling Probabilities
+              coefficients: [-1, 1]
+            symmetryInfo:
+              remarkableGenerators: {}
+              numberOfRepresentatives: 2
+              orderOfLiftingSymmetryGroups: 1
+              orderOfOutputSymmetryGroup: 1
+              orderOfOutputInputSymmetryGroup: 1
+              orderOfPartySymmetryGroup: 1
+            tags: [pure, simple, minimal]
+      - type: AffineTransform
+        affine: x - 2
+        of:
+          type: PermutationTransform
+          permutation: A1(1,2) A2(1,2)
+          of:
+            type: Inequality
+            bra:
+              scenario: '{[2 2] [2 2]}'
+              representation: Non-signaling Probabilities
+              coefficients: [-1, 1, -1, 1, 1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1,
+                1]
+            symmetryInfo:
+              remarkableGenerators:
+                outputPerms: ['A1(1,2) A2(1,2) B1(1,2) B2(1,2)']
+                outputInputPerms: ['A2(1,2) B(1,2)', 'B2(1,2) A(1,2)']
+                partyPerms: ['(A,B)']
+              numberOfRepresentatives: 8
+              orderOfLiftingSymmetryGroups: 1
+              orderOfOutputSymmetryGroup: 2
+              orderOfOutputInputSymmetryGroup: 8
+              orderOfPartySymmetryGroup: 2
+            tags: [pure, simple, minimal]

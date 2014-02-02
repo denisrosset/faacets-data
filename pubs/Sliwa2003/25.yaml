@@ -4,11 +4,6 @@ bra:
   representation: Non-signaling Correlators
   coefficients: [5, -1, 0, -1, 0, -1, 0, -1, -1, -1, 0, -1, 1, -2, 1, 0, 0, 2, 0,
     -1, -1, 0, 2, 0, 0, -1, 1]
-names: ['C. Sliwa tripartite inequality #25']
-bounds: {local: x >= 0}
-sources:
-  facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
-  bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
 symmetryInfo:
   remarkableGenerators: {}
   numberOfRepresentatives: 3072
@@ -16,4 +11,44 @@ symmetryInfo:
   orderOfOutputSymmetryGroup: 1
   orderOfOutputInputSymmetryGroup: 1
   orderOfPartySymmetryGroup: 1
+tags: [pure, simple]
+names: ['C. Sliwa tripartite inequality #25']
 facetOf: {local: true}
+bounds: {local: x >= 0}
+sources:
+  facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+  bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+decomposition:
+  type: RepresentationTransform
+  representation: Non-signaling Correlators
+  of:
+    type: ReverseTransform
+    of:
+      type: AffineTransform
+      affine: 1/4 x - 5
+      of:
+        type: PermutationTransform
+        permutation: A1(1,2) B1(1,2) C1(1,2) (B,C)
+        of:
+          type: Inequality
+          bra:
+            scenario: '{[2 2] [2 2] [2 2]}'
+            representation: Non-signaling Probabilities
+            coefficients: [-13, 5, -12, 4, 9, -5, 6, -2, -12, 10, -1, -1, 8, -10,
+              -5, 3, 9, -5, 6, -2, -9, 9, 0, 0, 6, -4, 5, -3, -6, 8, 1, 1, -4, 2,
+              7, -9, -2, 4, -3, 5, -9, 9, 0, 0, 3, -3, 4, -4, 0, -2, -13, 11, 2, 0,
+              9, -7, 3, -3, 4, -4, -1, 1, -8, 8]
+          symmetryInfo:
+            remarkableGenerators: {}
+            numberOfRepresentatives: 3072
+            orderOfLiftingSymmetryGroups: 1
+            orderOfOutputSymmetryGroup: 1
+            orderOfOutputInputSymmetryGroup: 1
+            orderOfPartySymmetryGroup: 1
+          tags: [pure, simple, minimal]
+          names: ['C. Sliwa tripartite inequality #25']
+          facetOf: {local: true}
+          bounds: {local: x <= 20}
+          sources:
+            facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+            bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
