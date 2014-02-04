@@ -15,7 +15,7 @@ symmetryInfo:
   orderOfOutputInputSymmetryGroup: 32
   orderOfPartySymmetryGroup: 2
 tags: [pure, simple]
-names: ['C. Sliwa tripartite inequality #3']
+names: ['C. Sliwa 2003, tripartite inequality #3']
 facetOf: {local: true}
 bounds: {local: x >= 0}
 sources:
@@ -53,7 +53,7 @@ decomposition:
             orderOfOutputInputSymmetryGroup: 32
             orderOfPartySymmetryGroup: 2
           tags: [pure, simple, minimal]
-          names: ['C. Sliwa tripartite inequality #3']
+          names: ['C. Sliwa 2003, tripartite inequality #3']
           facetOf: {local: true}
           bounds: {local: x <= 2}
           sources:

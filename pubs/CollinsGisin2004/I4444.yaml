@@ -10,12 +10,6 @@ bra:
     0, 1, 1, 1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0,
     0, 1, 1, 0, -1, -1, 0, -1, -1, 0, -1, -1, 0, 1, 1, 1, -1, -1, -1, 0, 0, 0, 0,
     0, 0]
-shortName: I4444
-names: ['Inequality I4444 defined in Collins, Gisin 2004']
-bounds: {local: x <= 0}
-sources:
-  bounds.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
-  facetOf.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
 symmetryInfo:
   remarkableGenerators:
     rest: ['A1(1,4,3,2) A2(1,4,3,2) A3(1,4,3,2) A4(1,4,3,2) B1(1,2,3,4) B2(1,2,3,4)
@@ -25,4 +19,58 @@ symmetryInfo:
   orderOfOutputSymmetryGroup: 1
   orderOfOutputInputSymmetryGroup: 1
   orderOfPartySymmetryGroup: 1
+tags: [pure, simple]
+shortName: I4444
+names: ['I4444, defined in Collins, Gisin 2004.']
 facetOf: {local: true}
+bounds: {local: x <= 0}
+sources:
+  bounds.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+  facetOf.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+decomposition:
+  type: RepresentationTransform
+  representation: Non-signaling Collins-Gisin
+  of:
+    type: AffineTransform
+    affine: 1/64 x - 51/16
+    of:
+      type: PermutationTransform
+      permutation: A1(1,2,3,4) A2(1,2,3,4) A3(1,2,3,4) A4(1,4,2) B1(1,2,3,4) B2(1,2,3,4) B3(1,2,3,4) B4(2,3,4) A(1,4)(2,3) B(1,4)(2,3)
+      of:
+        type: Inequality
+        bra:
+          scenario: '{[4 4 4 4] [4 4 4 4]}'
+          representation: Non-signaling Probabilities
+          coefficients: [-40, -32, 16, 16, -37, -29, 7, 19, -30, -22, -14, 26, -30,
+            -22, -6, 18, 8, 16, 0, 0, 11, 19, -9, 3, 2, 10, 18, -6, -30, 42, -6, 18,
+            8, 16, 0, 0, 11, 19, -9, 3, 18, 26, -30, 10, 18, 26, -22, 2, 16, -40,
+            8, 8, 19, -37, -1, 11, 26, -30, -22, 18, -6, 2, 18, -22, -37, -29, 19,
+            19, -30, -22, -2, 26, 21, -3, -27, -19, -27, 13, -35, 21, -1, 7, -9, -9,
+            -10, -2, 18, -18, 9, -15, -39, 33, -7, 33, -15, -23, 11, 19, 3, 3, 18,
+            26, -18, 10, 5, -19, 21, 29, 21, -3, 13, 5, 19, -37, 11, 11, 26, -30,
+            -10, 18, -19, 21, -3, 5, -35, 5, 21, 13, -30, -22, 10, 26, 21, -3, -15,
+            -19, 24, -32, -24, 16, -24, 16, -32, 24, -22, -14, 18, -30, -3, -27, -39,
+            21, -32, -24, -16, 24, -16, 24, -24, -32, 18, 26, -6, 10, 5, -19, 33,
+            29, 8, 16, 24, 0, 24, 0, 16, 8, 26, -30, 2, 18, -19, 21, 9, 5, 16, 24,
+            -32, 8, -32, 8, 24, 16, -22, 18, 18, 2, 13, 21, -23, 5, 16, 24, -32, 8,
+            -32, 8, 24, 16, -6, -30, -30, 18, -35, -27, -7, 21, -32, -24, -16, 24,
+            -16, 24, -24, -32, 2, -22, 42, 26, 5, 13, 33, -3, 8, 16, 24, 0, 24, 0,
+            16, 8, 18, -6, -6, -22, 21, -35, -15, 13, 24, -32, -24, 16, -24, 16, -32,
+            24]
+        symmetryInfo:
+          remarkableGenerators:
+            rest: ['A1(1,4,3,2) A2(1,4,3,2) A3(1,4,3,2) A4(1,2,3,4) B1(1,2,3,4) B2(1,2,3,4)
+                B3(1,2,3,4) B4(1,4,3,2) (A,B)']
+          numberOfRepresentatives: 63403380965376
+          orderOfLiftingSymmetryGroups: 1
+          orderOfOutputSymmetryGroup: 1
+          orderOfOutputInputSymmetryGroup: 1
+          orderOfPartySymmetryGroup: 1
+        tags: [pure, simple, minimal]
+        shortName: I4444
+        names: ['I4444, defined in Collins, Gisin 2004.']
+        facetOf: {local: true}
+        bounds: {local: x <= 204}
+        sources:
+          bounds.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+          facetOf.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']

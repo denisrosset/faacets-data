@@ -16,7 +16,7 @@ symmetryInfo:
   orderOfOutputInputSymmetryGroup: 16
   orderOfPartySymmetryGroup: 2
 tags: [degenerate, composite]
-names: ['C. Sliwa tripartite inequality #4']
+names: ['C. Sliwa 2003, tripartite inequality #4']
 facetOf: {local: true}
 bounds: {local: x >= 0}
 sources:

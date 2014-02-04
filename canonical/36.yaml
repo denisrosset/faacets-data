@@ -1,0 +1,22 @@
+type: Inequality
+bra:
+  scenario: '{[2 2] [2 2] [2 2]}'
+  representation: Non-signaling Probabilities
+  coefficients: [-8, 2, -8, 2, 5, -1, 7, -3, -5, 1, 3, -7, 2, 0, -4, 6, 7, -3, 5,
+    -1, -4, 2, -4, 2, 4, -2, -2, 4, -1, 1, 3, -3, -4, 6, 2, 0, 3, -3, -1, 1, -1, 5,
+    1, 3, 0, -2, 0, -2, 3, -7, -5, 1, -2, 4, 4, -2, 0, -6, 0, -6, 1, 3, -1, 5]
+symmetryInfo:
+  remarkableGenerators:
+    rest: ['B2(1,2) C2(1,2) A(1,2) (B,C)']
+  numberOfRepresentatives: 1536
+  orderOfLiftingSymmetryGroups: 1
+  orderOfOutputSymmetryGroup: 1
+  orderOfOutputInputSymmetryGroup: 1
+  orderOfPartySymmetryGroup: 1
+tags: [pure, simple, minimal]
+names: ['C. Sliwa 2003, tripartite inequality #35']
+facetOf: {local: true}
+bounds: {local: x <= 12}
+sources:
+  facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+  bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']

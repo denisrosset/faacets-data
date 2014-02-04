@@ -1,0 +1,61 @@
+type: Inequality
+bra:
+  scenario: '{[3 2 2] [3 3]}'
+  representation: Non-signaling Correlators
+  coefficients: [0, 0, 0, 0, -1, 2, 0, 0, 0, 2, 0, -2, -4, 3, 1, 0, 2, 4, 3, -1, 2,
+    2, 4, 3, 1]
+symmetryInfo:
+  remarkableGenerators:
+    liftings: ['A1(1,2)']
+    outputInputPerms: ['A2(1,2) B1(1,2,3) B2(1,3,2) B(1,2)']
+  numberOfRepresentatives: 864
+  orderOfLiftingSymmetryGroups: 2
+  orderOfOutputSymmetryGroup: 2
+  orderOfOutputInputSymmetryGroup: 4
+  orderOfPartySymmetryGroup: 1
+tags: [degenerate, simple]
+names: ['Local facet in {[3 2 2] [3 3]}, solved by SymPol.']
+facetOf: {local: true}
+bounds: {local: x <= 7}
+sources:
+  facetOf.local: ['http://www.math.uni-rostock.de/~rehn/software/sympol.html']
+  bounds.local: ['http://www.math.uni-rostock.de/~rehn/software/sympol.html']
+decomposition:
+  type: RepresentationTransform
+  representation: Non-signaling Correlators
+  of:
+    type: LiftingTransform
+    lifting: Lifting({[2+(1 0) 2 2] [3 3]})
+    of:
+      type: ReorderingTransform
+      reordering: Reordering((A,B))
+      of:
+        type: AffineTransform
+        affine: 1/6 x
+        of:
+          type: PermutationTransform
+          permutation: A1(1,3) A2(1,2) A(1,2)
+          of:
+            type: Inequality
+            bra:
+              scenario: '{[3 3] [2 2 2]}'
+              representation: Non-signaling Probabilities
+              coefficients: [-20, 4, 16, -20, 4, 16, 16, 4, -20, 16, 4, -20, -20,
+                4, 16, 16, 4, -20, 16, 4, -20, -20, 4, 16, -11, 13, -11, -11, 13,
+                -11, 7, -5, 7, 7, -5, 7]
+            symmetryInfo:
+              remarkableGenerators:
+                outputPerms: ['A1(1,3) A2(1,3) B1(1,2) B2(1,2)']
+                outputInputPerms: ['A2(1,3) B(1,2)', 'B2(1,2) A(1,2)']
+              numberOfRepresentatives: 432
+              orderOfLiftingSymmetryGroups: 1
+              orderOfOutputSymmetryGroup: 2
+              orderOfOutputInputSymmetryGroup: 8
+              orderOfPartySymmetryGroup: 1
+            tags: [pure, simple, minimal]
+            names: ['Local facet in {[3 2 2] [3 3]}, solved by SymPol.']
+            facetOf: {local: true}
+            bounds: {local: x <= 42}
+            sources:
+              facetOf.local: ['http://www.math.uni-rostock.de/~rehn/software/sympol.html']
+              bounds.local: ['http://www.math.uni-rostock.de/~rehn/software/sympol.html']

@@ -1,0 +1,25 @@
+type: Inequality
+bra:
+  scenario: '{[2 2] [2 2] [2 2]}'
+  representation: Non-signaling Probabilities
+  coefficients: [-2, 0, -2, 0, 2, 0, 2, 0, -1, 1, 1, -1, 1, -1, -1, 1, 2, 0, 2, 0,
+    -2, 0, -2, 0, 1, -1, -1, 1, -1, 1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 0, 2, 0,
+    2, 0, -2, 0, -2, 1, -1, -1, 1, -1, 1, 1, -1, 0, -2, 0, -2, 0, 2, 0, 2]
+symmetryInfo:
+  remarkableGenerators:
+    outputPerms: ['B1(1,2) B2(1,2) C1(1,2) C2(1,2)']
+    outputInputPerms: ['A1(1,2) A2(1,2) B1(1,2) B2(1,2) B(1,2) C(1,2)', 'B2(1,2) C2(1,2)
+        A(1,2)']
+    partyPerms: ['(B,C)']
+  numberOfRepresentatives: 192
+  orderOfLiftingSymmetryGroups: 1
+  orderOfOutputSymmetryGroup: 2
+  orderOfOutputInputSymmetryGroup: 8
+  orderOfPartySymmetryGroup: 2
+tags: [pure, simple, minimal]
+names: ['C. Sliwa 2003, tripartite inequality #11']
+facetOf: {local: true}
+bounds: {local: x <= 4}
+sources:
+  facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+  bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
