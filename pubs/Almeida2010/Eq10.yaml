@@ -19,7 +19,7 @@ symmetryInfo:
   orderOfOutputInputSymmetryGroup: 4
   orderOfPartySymmetryGroup: 3
 tags: [pure, simple]
-names: ['Almeida 2010, Guess your Neighbor's Input inequality, N = 3']
+names: ["Almeida 2010, Guess your Neighbor's Input inequality, N = 3"]
 shortName: GYNI
 bounds: {local: x <= 1/4, quantum: x <= 1/4, nosignaling: x <= 4/3}
 sources:
