@@ -1,22 +1,16 @@
-type: Inequality
-bra:
-  scenario: '{[2 2] [2 2] [2 2]}'
-  representation: Non-signaling Probabilities
-  coefficients: [-13, 5, -12, 4, 9, -5, 6, -2, -12, 10, -1, -1, 8, -10, -5, 3, 9,
-    -5, 6, -2, -9, 9, 0, 0, 6, -4, 5, -3, -6, 8, 1, 1, -4, 2, 7, -9, -2, 4, -3, 5,
-    -9, 9, 0, 0, 3, -3, 4, -4, 0, -2, -13, 11, 2, 0, 9, -7, 3, -3, 4, -4, -1, 1, -8,
-    8]
-symmetryInfo:
-  remarkableGenerators: {}
-  numberOfRepresentatives: 3072
-  orderOfLiftingSymmetryGroups: 1
-  orderOfOutputSymmetryGroup: 1
-  orderOfOutputInputSymmetryGroup: 1
-  orderOfPartySymmetryGroup: 1
-tags: [pure, simple, minimal]
+type: BellExpression
+scenario: '[(2 2) (2 2) (2 2)]'
+representation: Non-signaling Probabilities
+coefficients: [-13, 5, -12, 4, 9, -5, 6, -2, -12, 10, -1, -1, 8, -10, -5, 3, 9,
+  -5, 6, -2, -9, 9, 0, 0, 6, -4, 5, -3, -6, 8, 1, 1, -4, 2, 7, -9, -2, 4, -3, 5,
+  -9, 9, 0, 0, 3, -3, 4, -4, 0, -2, -13, 11, 2, 0, 9, -7, 3, -3, 4, -4, -1, 1, -8,
+  8]
+keywords: [canonical, not-composite, not-io-lifted, minimal]
 names: ['C. Sliwa 2003, tripartite inequality #25']
-facetOf: {local: true}
-bounds: {local: x <= 20}
+upper:
+  keywords: [facet-local]
+  bounds:
+    local: 20
 sources:
-  facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
-  bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+  upper.keywords.facet-local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+  upper.bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
