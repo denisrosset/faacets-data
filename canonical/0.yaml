@@ -1,17 +1,19 @@
-type: Inequality
-bra:
-  scenario: '{[2]}'
-  representation: Non-signaling Probabilities
-  coefficients: [-1, 1]
-symmetryInfo:
-  remarkableGenerators: {}
-  numberOfRepresentatives: 2
-  orderOfLiftingSymmetryGroups: 1
-  orderOfOutputSymmetryGroup: 1
-  orderOfOutputInputSymmetryGroup: 1
-  orderOfPartySymmetryGroup: 1
-tags: [pure, simple, minimal]
+type: BellExpression
+scenario: '[(2)]'
+representation: Non-signaling Probabilities
+coefficients: [-1, 1]
+keywords: [canonical, not-composite, not-io-lifted, minimal]
 shortName: Positivity
 names: [Positivity inequality]
-facetOf: {local: true}
-bounds: {local: x <= 1, quantum: x <= 1}
+upper:
+  keywords: [facet-local]
+  bounds:
+    local: 1
+    quantum: 1
+    no-signaling: 1
+remarkableForms:
+  opposite:
+    type: ReverseTransform
+    of:
+      type: CanonicalExpression
+      index: 0

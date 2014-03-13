@@ -1,24 +1,15 @@
-type: Inequality
-bra:
-  scenario: '{[2 2] [2 2] [2 2]}'
-  representation: Non-signaling Probabilities
-  coefficients: [-5, 3, -3, 1, 5, -3, 3, -1, -1, -1, 1, -3, 1, 1, -1, 3, 5, -3, 3,
-    -1, -5, 3, -3, 1, 1, 1, -1, 3, -1, -1, 1, -3, -1, -1, 1, -3, 1, 1, -1, 3, 3, -5,
-    -3, 1, -3, 5, 3, -1, 1, 1, -1, 3, -1, -1, 1, -3, -3, 5, 3, -1, 3, -5, -3, 1]
-symmetryInfo:
-  remarkableGenerators:
-    outputPerms: ['B1(1,2) B2(1,2) C1(1,2) C2(1,2)']
-    outputInputPerms: ['A1(1,2) B(1,2) C(1,2)']
-    partyPerms: ['(B,C)']
-  numberOfRepresentatives: 384
-  orderOfLiftingSymmetryGroups: 1
-  orderOfOutputSymmetryGroup: 2
-  orderOfOutputInputSymmetryGroup: 4
-  orderOfPartySymmetryGroup: 2
-tags: [pure, simple, minimal]
+type: BellExpression
+scenario: '[(2 2) (2 2) (2 2)]'
+representation: Non-signaling Probabilities
+coefficients: [-5, 3, -3, 1, 5, -3, 3, -1, -1, -1, 1, -3, 1, 1, -1, 3, 5, -3, 3,
+  -1, -5, 3, -3, 1, 1, 1, -1, 3, -1, -1, 1, -3, -1, -1, 1, -3, 1, 1, -1, 3, 3, -5,
+  -3, 1, -3, 5, 3, -1, 1, 1, -1, 3, -1, -1, 1, -3, -3, 5, 3, -1, 3, -5, -3, 1]
+keywords: [canonical, not-composite, not-io-lifted, minimal]
 names: ['C. Sliwa 2003, tripartite inequality #8']
-facetOf: {local: true}
-bounds: {local: x <= 8}
+upper:
+  keywords: [facet-local]
+  bounds:
+    local: 8
 sources:
-  facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
-  bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+  upper.keywords.facet-local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+  upper.bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
