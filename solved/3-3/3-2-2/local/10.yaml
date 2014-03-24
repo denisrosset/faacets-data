@@ -31,7 +31,7 @@ decomposition:
     lifting: Lifting([(3 2+(1 0)) (2+(1 0) 2 2)])
     of:
       type: PermutationTransform
-      permutation: A1(1,2) B1(1,2) B3(1,2) B(2,3)
+      permutation: A1(1,2,3) B1(1,2) B2(1,2)
       of:
         type: AffineTransform
         affine: 1/16 * x - 1/8

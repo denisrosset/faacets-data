@@ -46,6 +46,12 @@ decomposition:
                 scenario: '[(2)]'
                 representation: Non-signaling Probabilities
                 coefficients: [-1, 1]
+                lower:
+                  bounds: {local: '-1', quantum: '-1', no-signaling: '-1'}
+                  keywords: [facet-local]
+                upper:
+                  bounds: {local: '1', quantum: '1', no-signaling: '1'}
+                  keywords: [facet-local]
                 keywords: [canonical, minimal, not-composite, not-io-lifted]
           - type: BellExpressionProduct
             of:
@@ -59,6 +65,12 @@ decomposition:
                   scenario: '[(2)]'
                   representation: Non-signaling Probabilities
                   coefficients: [-1, 1]
+                  lower:
+                    bounds: {local: '-1', quantum: '-1', no-signaling: '-1'}
+                    keywords: [facet-local]
+                  upper:
+                    bounds: {local: '1', quantum: '1', no-signaling: '1'}
+                    keywords: [facet-local]
                   keywords: [canonical, minimal, not-composite, not-io-lifted]
             - type: AffineTransform
               affine: x - 1
@@ -67,4 +79,10 @@ decomposition:
                 scenario: '[(2)]'
                 representation: Non-signaling Probabilities
                 coefficients: [-1, 1]
+                lower:
+                  bounds: {local: '-1', quantum: '-1', no-signaling: '-1'}
+                  keywords: [facet-local]
+                upper:
+                  bounds: {local: '1', quantum: '1', no-signaling: '1'}
+                  keywords: [facet-local]
                 keywords: [canonical, minimal, not-composite, not-io-lifted]
