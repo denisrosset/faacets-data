@@ -32,14 +32,8 @@ decomposition:
       type: AffineTransform
       affine: x + 4
       of:
-        type: BellExpression
-        scenario: '[(2 2) (2 2) (2 2)]'
-        representation: Non-signaling Probabilities
-        coefficients: [-2, 1, -1, 0, 1, 0, 2, -1, -1, 2, 2, -1, 0, -1, -1, 0, 2, -1,
-          -1, 2, -1, 0, 0, -1, -1, 0, -2, 1, 2, -1, 1, 0, 0, -1, -1, 0, -1, 2, 2,
-          -1, -1, 2, 0, 1, 0, -1, 1, -2, 0, 1, -1, 2, 1, -2, 0, -1, -1, 0, 0, -1,
-          2, -1, -1, 2]
-        lower:
-          bounds: {local: '-4'}
-          keywords: [facet-local]
-        keywords: [canonical, minimal, not-composite, not-io-lifted]
+        type: OppositeTransform
+        of:
+          type: PermutationTransform
+          permutation: B1(1,2) C(1,2) (A,C)
+          of: {type: CanonicalExpression, index: 15}
