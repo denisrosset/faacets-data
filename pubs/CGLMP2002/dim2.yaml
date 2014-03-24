@@ -1,26 +1,27 @@
-type: Inequality
-bra:
-  scenario: '{[2 2] [2 2]}'
-  representation: Signaling Probabilities
-  coefficients: [1, -1, -1, 1, -1, 1, 1, -1, 1, -1, 1, -1, -1, 1, -1, 1]
-symmetryInfo:
+type: BellExpression
+scenario: '[(2 2) (2 2)]'
+representation: Signaling Probabilities
+coefficients: [1, -1, -1, 1, -1, 1, 1, -1, 1, -1, 1, -1, -1, 1, -1, 1]
+symmetries:
   remarkableGenerators:
     outputPerms: ['A1(1,2) A2(1,2) B1(1,2) B2(1,2)']
     outputInputPerms: ['A2(1,2) B(1,2)', 'B1(1,2) A(1,2)']
     rest: ['A(1,2) B(1,2) (A,B)']
   numberOfRepresentatives: 8
-  orderOfLiftingSymmetryGroups: 1
-  orderOfOutputSymmetryGroup: 2
-  orderOfOutputInputSymmetryGroup: 8
-  orderOfPartySymmetryGroup: 1
-tags: [pure, simple]
+upper:
+  bounds: {local: '2'}
+  keywords: [facet-local]
+keywords: [not-composite, not-io-lifted, not-minimal]
 shortName: CGLMP2
 names: ['CGLMP, 2002, inequality for 2 outcomes']
-facetOf: {local: true}
-bounds: {local: x <= 2}
 sources:
-  bounds.local: ['doi:10.1103/PhysRevLett.88.040404', 'arXiv:quant-ph/0106024']
-  facetOf.local: ['doi:10.1103/PhysRevLett.95.210402', 'arXiv:quant-ph/0506225']
+  upper.bounds.local: ['doi:10.1103/PhysRevLett.88.040404', 'arXiv:quant-ph/0106024']
+  upper.keywords.facet-local: ['doi:10.1103/PhysRevLett.95.210402', 'arXiv:quant-ph/0506225']
+remarkableForms:
+  maximal:
+    type: PermutationTransform
+    permutation: A2(1,2)
+    of: {type: OriginalExpression}
 decomposition:
   type: RepresentationTransform
   representation: Signaling Probabilities
@@ -28,26 +29,11 @@ decomposition:
     type: PermutationTransform
     permutation: A1(1,2)
     of:
-      type: Inequality
-      bra:
-        scenario: '{[2 2] [2 2]}'
-        representation: Non-signaling Probabilities
-        coefficients: [-1, 1, -1, 1, 1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1]
-      symmetryInfo:
-        remarkableGenerators:
-          outputPerms: ['A1(1,2) A2(1,2) B1(1,2) B2(1,2)']
-          outputInputPerms: ['A2(1,2) B(1,2)', 'B2(1,2) A(1,2)']
-          partyPerms: ['(A,B)']
-        numberOfRepresentatives: 8
-        orderOfLiftingSymmetryGroups: 1
-        orderOfOutputSymmetryGroup: 2
-        orderOfOutputInputSymmetryGroup: 8
-        orderOfPartySymmetryGroup: 2
-      tags: [pure, simple, minimal]
-      shortName: CGLMP2
-      names: ['CGLMP, 2002, inequality for 2 outcomes']
-      facetOf: {local: true}
-      bounds: {local: x <= 2}
-      sources:
-        bounds.local: ['doi:10.1103/PhysRevLett.88.040404', 'arXiv:quant-ph/0106024']
-        facetOf.local: ['doi:10.1103/PhysRevLett.95.210402', 'arXiv:quant-ph/0506225']
+      type: BellExpression
+      scenario: '[(2 2) (2 2)]'
+      representation: Non-signaling Probabilities
+      coefficients: [-1, 1, -1, 1, 1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1]
+      upper:
+        bounds: {local: '2'}
+        keywords: [facet-local]
+      keywords: [canonical, minimal, not-composite, not-io-lifted]

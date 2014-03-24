@@ -1,58 +1,46 @@
-type: Inequality
-bra:
-  scenario: '{[3 3 3] [3 3 3]}'
-  representation: Non-signaling Collins-Gisin
-  coefficients: [0, -1, -1, 0, 0, 0, 0, -2, 1, 1, 1, 1, 0, 1, -2, 1, 0, 1, 0, 1, 1,
-    -1, 1, 1, 0, 1, 0, -1, -1, 1, 0, 1, 1, -1, -1, 0, 0, 1, 0, -1, 0, -1, 0, 1, 1,
-    -1, -1, 0, 0]
-symmetryInfo:
+type: BellExpression
+scenario: '[(3 3 3) (3 3 3)]'
+representation: Non-signaling Collins-Gisin
+coefficients: [0, -1, -1, 0, 0, 0, 0, -2, 1, 1, 1, 1, 0, 1, -2, 1, 0, 1, 0, 1, 1,
+  -1, 1, 1, 0, 1, 0, -1, -1, 1, 0, 1, 1, -1, -1, 0, 0, 1, 0, -1, 0, -1, 0, 1, 1, -1,
+  -1, 0, 0]
+symmetries:
   remarkableGenerators:
     rest: ['A1(1,3,2) A2(1,3,2) A3(1,3,2) B1(1,2,3) B2(1,2,3) B3(1,2,3) (A,B)']
   numberOfRepresentatives: 1679616
-  orderOfLiftingSymmetryGroups: 1
-  orderOfOutputSymmetryGroup: 1
-  orderOfOutputInputSymmetryGroup: 1
-  orderOfPartySymmetryGroup: 1
-tags: [pure, simple]
+upper:
+  bounds: {local: '0'}
+  keywords: [facet-local]
+keywords: [not-composite, not-io-lifted, not-minimal]
 shortName: I3333
 names: ['I3333, defined in Collins, Gisin 2004.']
-facetOf: {local: true}
-bounds: {local: x <= 0}
 sources:
-  bounds.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
-  facetOf.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+  upper.bounds.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+  upper.keywords.facet-local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+remarkableForms:
+  maximal:
+    type: PermutationTransform
+    permutation: A1(1,3) A2(1,3) A3(1,2,3) B1(1,2,3) B2(1,2) B3(2,3) A(1,2,3)
+    of: {type: OriginalExpression}
 decomposition:
   type: RepresentationTransform
   representation: Non-signaling Collins-Gisin
   of:
-    type: AffineTransform
-    affine: 1/27 x - 13/9
+    type: PermutationTransform
+    permutation: A1(1,2,3) A2(1,2,3) A3(2,3) B3(1,3) A(1,3) B(1,3)
     of:
-      type: PermutationTransform
-      permutation: A1(1,2,3) A2(1,2,3) A3(2,3) B3(1,3) A(1,3) B(1,3)
+      type: AffineTransform
+      affine: 1/27 * x - 13/9
       of:
-        type: Inequality
-        bra:
-          scenario: '{[3 3 3] [3 3 3]}'
-          representation: Non-signaling Probabilities
-          coefficients: [-16, 5, 5, -11, -5, 10, -8, -5, 7, 5, -1, -1, 1, 7, -5, 13,
-            -11, 1, 5, -1, -1, 10, -11, 4, 4, 7, -8, -11, 1, 10, 9, -3, -6, 3, -12,
-            9, -5, 7, -11, -3, -15, 9, 9, -6, -12, 10, -5, 4, -6, 9, 6, -3, 9, 3,
-            -8, 13, 4, 3, 9, -3, -3, 9, 3, -5, -11, 7, -12, -6, 9, 9, -6, -12, 7,
-            1, -8, 9, -12, 3, 3, -12, 9]
-        symmetryInfo:
-          remarkableGenerators:
-            partyPerms: ['(A,B)']
-          numberOfRepresentatives: 1679616
-          orderOfLiftingSymmetryGroups: 1
-          orderOfOutputSymmetryGroup: 1
-          orderOfOutputInputSymmetryGroup: 1
-          orderOfPartySymmetryGroup: 2
-        tags: [pure, simple, minimal]
-        shortName: I3333
-        names: ['I3333, defined in Collins, Gisin 2004.']
-        facetOf: {local: true}
-        bounds: {local: x <= 39}
-        sources:
-          bounds.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
-          facetOf.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+        type: BellExpression
+        scenario: '[(3 3 3) (3 3 3)]'
+        representation: Non-signaling Probabilities
+        coefficients: [-16, 5, 5, -11, -5, 10, -8, -5, 7, 5, -1, -1, 1, 7, -5, 13,
+          -11, 1, 5, -1, -1, 10, -11, 4, 4, 7, -8, -11, 1, 10, 9, -3, -6, 3, -12,
+          9, -5, 7, -11, -3, -15, 9, 9, -6, -12, 10, -5, 4, -6, 9, 6, -3, 9, 3, -8,
+          13, 4, 3, 9, -3, -3, 9, 3, -5, -11, 7, -12, -6, 9, 9, -6, -12, 7, 1, -8,
+          9, -12, 3, 3, -12, 9]
+        upper:
+          bounds: {local: '39'}
+          keywords: [facet-local]
+        keywords: [canonical, minimal, not-composite, not-io-lifted]

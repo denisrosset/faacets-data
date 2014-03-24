@@ -1,0 +1,18 @@
+type: BellExpression
+scenario: '[(2 2) (2 2)]'
+representation: Non-signaling Probabilities
+coefficients: [-1, 1, -1, 1, 1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1]
+upper:
+  bounds: {local: '2', quantum: '[2.828427124746190, 2.828427124746191]', no-signaling: '4',
+    ten-percents-nonfree-settings: '2.2'}
+  keywords: [facet-local]
+keywords: [canonical, minimal, not-composite, not-io-lifted]
+shortName: CHSH
+names: [Clauser-Horne-Shimony-Holt inequality]
+sources:
+  upper.bounds.local: ['doi:10.1103/PhysRevLett.23.880']
+  upper.bounds.quantum: ['doi:10.1007/BF00417500', 'http://www.tau.ac.il/~tsirel/download/qbell80.html']
+  extra.detection_loophole: ['doi:10.1103/PhysRevA.47.R747']
+  extra.detection_loophole_singlet: ['doi:10.1111/j.1749-6632.1986.tb12444.x', 'doi:10.1103/PhysRevD.35.3831']
+detection_loophole: eta_c = 2/3
+detection_loophole_singlet: eta_c = [0.8284271247461901, 0.8284271247461902]

@@ -1,27 +1,28 @@
-type: Inequality
-bra:
-  scenario: '{[2 2] [2 2] [2 2]}'
-  representation: Non-signaling Correlators
-  coefficients: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0,
-    0, -1, 0, 1, 0]
-symmetryInfo:
+type: BellExpression
+scenario: '[(2 2) (2 2) (2 2)]'
+representation: Non-signaling Correlators
+coefficients: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0,
+  -1, 0, 1, 0]
+symmetries:
   remarkableGenerators:
-    outputPerms: ['A1(1,2) B2(1,2) C1(1,2)', 'A1(1,2) B1(1,2) C2(1,2)', 'A2(1,2) B2(1,2)
+    outputPerms: ['A2(1,2) B1(1,2) C1(1,2)', 'A1(1,2) B1(1,2) C2(1,2)', 'A2(1,2) B2(1,2)
         C2(1,2)']
     outputInputPerms: ['B1(1,2) A(1,2) C(1,2)', 'C2(1,2) A(1,2) B(1,2)']
     partyPerms: ['(A,C)']
-    rest: ['A2(1,2) (B,C)']
+    rest: ['C2(1,2) (A,B)']
   numberOfRepresentatives: 16
-  orderOfLiftingSymmetryGroups: 1
-  orderOfOutputSymmetryGroup: 8
-  orderOfOutputInputSymmetryGroup: 32
-  orderOfPartySymmetryGroup: 2
-tags: [pure, simple]
+upper:
+  bounds: {local: '2'}
+  keywords: [facet-local]
+keywords: [not-composite, not-io-lifted, not-minimal]
 names: ['Mermin 1990, inequality for 3 parties']
-facetOf: {local: true}
-bounds: {local: x <= 2}
 sources:
-  bounds.local: ['doi:10.1103/PhysRevLett.65.1838']
+  upper.bounds.local: ['doi:10.1103/PhysRevLett.65.1838']
+remarkableForms:
+  maximal:
+    type: PermutationTransform
+    permutation: C2(1,2)
+    of: {type: OriginalExpression}
 decomposition:
   type: RepresentationTransform
   representation: Non-signaling Correlators
@@ -29,29 +30,13 @@ decomposition:
     type: PermutationTransform
     permutation: A1(1,2) B2(1,2)
     of:
-      type: Inequality
-      bra:
-        scenario: '{[2 2] [2 2] [2 2]}'
-        representation: Non-signaling Probabilities
-        coefficients: [-1, 1, 0, 0, 1, -1, 0, 0, 0, 0, -1, 1, 0, 0, 1, -1, 1, -1,
-          0, 0, -1, 1, 0, 0, 0, 0, 1, -1, 0, 0, -1, 1, 0, 0, -1, 1, 0, 0, 1, -1, 1,
-          -1, 0, 0, -1, 1, 0, 0, 0, 0, 1, -1, 0, 0, -1, 1, -1, 1, 0, 0, 1, -1, 0,
-          0]
-      symmetryInfo:
-        remarkableGenerators:
-          outputPerms: ['A1(1,2) B2(1,2) C1(1,2)', 'A1(1,2) B1(1,2) C2(1,2)', 'A2(1,2)
-              B2(1,2) C2(1,2)']
-          outputInputPerms: ['B2(1,2) A(1,2) C(1,2)', 'C2(1,2) A(1,2) B(1,2)']
-          partyPerms: ['(B,C)']
-          rest: ['B2(1,2) (A,C)']
-        numberOfRepresentatives: 16
-        orderOfLiftingSymmetryGroups: 1
-        orderOfOutputSymmetryGroup: 8
-        orderOfOutputInputSymmetryGroup: 32
-        orderOfPartySymmetryGroup: 2
-      tags: [pure, simple, minimal]
-      names: ['Mermin 1990, inequality for 3 parties']
-      facetOf: {local: true}
-      bounds: {local: x <= 2}
-      sources:
-        bounds.local: ['doi:10.1103/PhysRevLett.65.1838']
+      type: BellExpression
+      scenario: '[(2 2) (2 2) (2 2)]'
+      representation: Non-signaling Probabilities
+      coefficients: [-1, 1, 0, 0, 1, -1, 0, 0, 0, 0, -1, 1, 0, 0, 1, -1, 1, -1, 0,
+        0, -1, 1, 0, 0, 0, 0, 1, -1, 0, 0, -1, 1, 0, 0, -1, 1, 0, 0, 1, -1, 1, -1,
+        0, 0, -1, 1, 0, 0, 0, 0, 1, -1, 0, 0, -1, 1, -1, 1, 0, 0, 1, -1, 0, 0]
+      upper:
+        bounds: {local: '2'}
+        keywords: [facet-local]
+      keywords: [canonical, minimal, not-composite, not-io-lifted]

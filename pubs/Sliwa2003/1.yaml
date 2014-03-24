@@ -1,85 +1,58 @@
-type: Inequality
-bra:
-  scenario: '{[2 2] [2 2] [2 2]}'
-  representation: Non-signaling Correlators
-  coefficients: [1, -1, 0, -1, 1, 0, 0, 0, 0, -1, 1, 0, 1, -1, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0]
-symmetryInfo:
+type: BellExpression
+scenario: '[(2 2) (2 2) (2 2)]'
+representation: Non-signaling Correlators
+coefficients: [1, -1, 0, -1, 1, 0, 0, 0, 0, -1, 1, 0, 1, -1, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0]
+symmetries:
   remarkableGenerators:
     liftings: ['C2(1,2)', 'B2(1,2)', 'A2(1,2)']
-    partyPerms: ['(A,B)', '(B,C)']
+    partyPerms: ['(B,C)', '(A,B)']
   numberOfRepresentatives: 64
-  orderOfLiftingSymmetryGroups: 8
-  orderOfOutputSymmetryGroup: 8
-  orderOfOutputInputSymmetryGroup: 8
-  orderOfPartySymmetryGroup: 6
-tags: [degenerate, composite]
+lower:
+  bounds: {local: '0'}
+  keywords: [facet-local]
+keywords: [composite, io-lifted, not-minimal]
 names: ['C. Sliwa 2003, tripartite inequality #1']
-facetOf: {local: true}
-bounds: {local: x >= 0}
 sources:
-  facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
-  bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+  lower.keywords.facet-local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+  lower.bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+remarkableForms:
+  maximal:
+    type: PermutationTransform
+    permutation: A1(1,2) B1(1,2) C1(1,2)
+    of: {type: OriginalExpression}
 decomposition:
   type: RepresentationTransform
   representation: Non-signaling Correlators
   of:
     type: LiftingTransform
-    lifting: Lifting({[2]+[2] [2]+[2] [2]+[2]})
+    lifting: Lifting([(2)+(2) (2)+(2) (2)+(2)])
     of:
-      type: AffineTransform
-      affine: -x
+      type: BellExpressionProduct
       of:
-        type: InequalityProduct
+      - type: AffineTransform
+        affine: x + 1
+        of:
+          type: BellExpression
+          scenario: '[(2)]'
+          representation: Non-signaling Probabilities
+          coefficients: [-1, 1]
+          keywords: [canonical, minimal, not-composite, not-io-lifted]
+      - type: BellExpressionProduct
         of:
         - type: AffineTransform
-          affine: x - 1
+          affine: x + 1
           of:
-            type: PermutationTransform
-            permutation: A1(1,2)
-            of:
-              type: Inequality
-              bra:
-                scenario: '{[2]}'
-                representation: Non-signaling Probabilities
-                coefficients: [-1, 1]
-              symmetryInfo:
-                remarkableGenerators: {}
-                numberOfRepresentatives: 2
-                orderOfLiftingSymmetryGroups: 1
-                orderOfOutputSymmetryGroup: 1
-                orderOfOutputInputSymmetryGroup: 1
-                orderOfPartySymmetryGroup: 1
-              tags: [pure, simple, minimal]
+            type: BellExpression
+            scenario: '[(2)]'
+            representation: Non-signaling Probabilities
+            coefficients: [-1, 1]
+            keywords: [canonical, minimal, not-composite, not-io-lifted]
         - type: AffineTransform
           affine: x + 1
           of:
-            type: Inequality
-            bra:
-              scenario: '{[2]}'
-              representation: Non-signaling Probabilities
-              coefficients: [-1, 1]
-            symmetryInfo:
-              remarkableGenerators: {}
-              numberOfRepresentatives: 2
-              orderOfLiftingSymmetryGroups: 1
-              orderOfOutputSymmetryGroup: 1
-              orderOfOutputInputSymmetryGroup: 1
-              orderOfPartySymmetryGroup: 1
-            tags: [pure, simple, minimal]
-        - type: AffineTransform
-          affine: x + 1
-          of:
-            type: Inequality
-            bra:
-              scenario: '{[2]}'
-              representation: Non-signaling Probabilities
-              coefficients: [-1, 1]
-            symmetryInfo:
-              remarkableGenerators: {}
-              numberOfRepresentatives: 2
-              orderOfLiftingSymmetryGroups: 1
-              orderOfOutputSymmetryGroup: 1
-              orderOfOutputInputSymmetryGroup: 1
-              orderOfPartySymmetryGroup: 1
-            tags: [pure, simple, minimal]
+            type: BellExpression
+            scenario: '[(2)]'
+            representation: Non-signaling Probabilities
+            coefficients: [-1, 1]
+            keywords: [canonical, minimal, not-composite, not-io-lifted]

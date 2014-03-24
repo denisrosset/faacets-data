@@ -1,0 +1,59 @@
+type: BellExpression
+scenario: '[(3 3 2) (3 2)]'
+representation: Non-signaling Correlators
+coefficients: [0, -2, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 1, 0,
+  0, 0]
+symmetries:
+  remarkableGenerators:
+    liftings: ['B1(1,2)', 'B1(2,3)', 'A3(1,2)', 'A2(1,2)', 'A2(2,3)', 'A1(2,3)']
+  numberOfRepresentatives: 12
+upper:
+  bounds: {local: '1'}
+  keywords: [facet-local]
+keywords: [composite, io-lifted, not-minimal]
+names: ['Local facet in [(3 3 2) (3 2)], solved by SymPol.']
+sources:
+  upper.keywords.facet-local: ['http://www.math.uni-rostock.de/~rehn/software/sympol.html']
+  upper.bounds.local: ['http://www.math.uni-rostock.de/~rehn/software/sympol.html']
+remarkableForms:
+  maximal:
+    type: PermutationTransform
+    permutation: A1(1,3,2) B2(1,2)
+    of: {type: OriginalExpression}
+decomposition:
+  type: RepresentationTransform
+  representation: Non-signaling Correlators
+  of:
+    type: ReorderingTransform
+    reordering: Reordering(B(1,2))
+    of:
+      type: LiftingTransform
+      lifting: Lifting([(2+(0 1))+(3 2) (2)+(3)])
+      of:
+        type: AffineTransform
+        affine: 3/2 * x + 1
+        of:
+          type: BellExpressionProduct
+          of:
+          - type: PermutationTransform
+            permutation: A1(1,2)
+            of:
+              type: AffineTransform
+              affine: x + 1
+              of:
+                type: BellExpression
+                scenario: '[(2)]'
+                representation: Non-signaling Probabilities
+                coefficients: [-1, 1]
+                keywords: [canonical, minimal, not-composite, not-io-lifted]
+          - type: PermutationTransform
+            permutation: A1(1,2)
+            of:
+              type: AffineTransform
+              affine: x - 1
+              of:
+                type: BellExpression
+                scenario: '[(2)]'
+                representation: Non-signaling Probabilities
+                coefficients: [-1, 1]
+                keywords: [canonical, minimal, not-composite, not-io-lifted]

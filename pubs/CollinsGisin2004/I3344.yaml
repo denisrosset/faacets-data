@@ -1,65 +1,53 @@
-type: Inequality
-bra:
-  scenario: '{[4 4 4] [4 4 4]}'
-  representation: Non-signaling Collins-Gisin
-  coefficients: [0, -1, -1, -1, 0, 0, 0, 0, 0, 0, -2, 1, 1, 1, 1, 1, 1, 0, 0, 1, -2,
-    1, 1, 0, 1, 1, 0, 0, 1, 1, -2, 1, 0, 0, 1, 0, 0, 1, 1, 1, -1, 1, 1, 1, 0, 0, 1,
-    0, 0, -1, -1, 1, 1, 0, 0, 1, 1, 0, -1, -1, -1, 1, 0, 0, 1, 1, 1, -1, -1, -1, 0,
-    0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, 1, 1, 0, -1, -1, 0, -1, -1, 0, 1, 1, 1, -1,
-    -1, -1, 0, 0, 0]
-symmetryInfo:
+type: BellExpression
+scenario: '[(4 4 4) (4 4 4)]'
+representation: Non-signaling Collins-Gisin
+coefficients: [0, -1, -1, -1, 0, 0, 0, 0, 0, 0, -2, 1, 1, 1, 1, 1, 1, 0, 0, 1, -2,
+  1, 1, 0, 1, 1, 0, 0, 1, 1, -2, 1, 0, 0, 1, 0, 0, 1, 1, 1, -1, 1, 1, 1, 0, 0, 1,
+  0, 0, -1, -1, 1, 1, 0, 0, 1, 1, 0, -1, -1, -1, 1, 0, 0, 1, 1, 1, -1, -1, -1, 0,
+  0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, 1, 1, 0, -1, -1, 0, -1, -1, 0, 1, 1, 1, -1, -1,
+  -1, 0, 0, 0]
+symmetries:
   remarkableGenerators:
     rest: ['A1(1,4,3,2) A2(1,4,3,2) A3(1,4,3,2) B1(1,2,3,4) B2(1,2,3,4) B3(1,2,3,4)
         (A,B)']
   numberOfRepresentatives: 6879707136
-  orderOfLiftingSymmetryGroups: 1
-  orderOfOutputSymmetryGroup: 1
-  orderOfOutputInputSymmetryGroup: 1
-  orderOfPartySymmetryGroup: 1
-tags: [pure, simple]
+upper:
+  bounds: {local: '0'}
+  keywords: [facet-local]
+keywords: [not-composite, not-io-lifted, not-minimal]
 shortName: I3344
 names: ['I3344, defined in Collins, Gisin 2004.']
-facetOf: {local: true}
-bounds: {local: x <= 0}
 sources:
-  bounds.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
-  facetOf.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+  upper.bounds.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+  upper.keywords.facet-local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+remarkableForms:
+  maximal:
+    type: PermutationTransform
+    permutation: A1(1,4)(2,3) A2(1,4)(2,3) A3(1,2,3,4) B1(1,2,3,4) B2(1,3) B3(1,2)(3,4) A(1,2,3)
+    of: {type: OriginalExpression}
 decomposition:
   type: RepresentationTransform
   representation: Non-signaling Collins-Gisin
   of:
-    type: AffineTransform
-    affine: 1/48 x - 27/16
+    type: PermutationTransform
+    permutation: A1(1,4)(2,3) A2(1,2,3,4) B1(1,3) B3(1,4,3,2) A(1,2) B(1,2)
     of:
-      type: PermutationTransform
-      permutation: A1(1,4)(2,3) A2(1,2,3,4) B1(1,3) B3(1,4,3,2) A(1,2) B(1,2)
+      type: AffineTransform
+      affine: 1/48 * x - 27/16
       of:
-        type: Inequality
-        bra:
-          scenario: '{[4 4 4] [4 4 4]}'
-          representation: Non-signaling Probabilities
-          coefficients: [-30, -14, 2, 18, -22, -14, -6, 18, -21, -13, -5, 15, -14,
-            2, 18, -14, 18, -22, -14, 10, 19, -21, -13, 7, 2, 18, -14, 2, 10, 18,
-            -22, 2, 11, 19, -21, -1, 18, -14, 2, 18, 2, 10, 18, -6, 3, 11, 19, -9,
-            -22, 18, 10, 2, 10, 18, -22, 2, -1, -17, 15, 11, -14, -22, 18, 10, 18,
-            -22, -14, 10, -17, 15, -1, -5, -6, -14, -22, 18, -22, -14, -6, 18, 15,
-            -1, -17, -21, 18, 10, 2, -6, 2, 10, 18, -6, 15, -1, -17, 27, -21, 19,
-            11, 3, -1, -17, 15, 15, -3, 5, 13, -3, -13, -21, 19, 11, -17, 15, -1,
-            -1, 5, 13, -27, 5, -5, -13, -21, 19, 15, -1, -17, -17, 13, -27, -19, 13,
-            15, 7, -1, -9, 11, -5, -21, 27, -3, 5, 13, -3]
-        symmetryInfo:
-          remarkableGenerators:
-            partyPerms: ['(A,B)']
-          numberOfRepresentatives: 6879707136
-          orderOfLiftingSymmetryGroups: 1
-          orderOfOutputSymmetryGroup: 1
-          orderOfOutputInputSymmetryGroup: 1
-          orderOfPartySymmetryGroup: 2
-        tags: [pure, simple, minimal]
-        shortName: I3344
-        names: ['I3344, defined in Collins, Gisin 2004.']
-        facetOf: {local: true}
-        bounds: {local: x <= 81}
-        sources:
-          bounds.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
-          facetOf.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+        type: BellExpression
+        scenario: '[(4 4 4) (4 4 4)]'
+        representation: Non-signaling Probabilities
+        coefficients: [-30, -14, 2, 18, -22, -14, -6, 18, -21, -13, -5, 15, -14, 2,
+          18, -14, 18, -22, -14, 10, 19, -21, -13, 7, 2, 18, -14, 2, 10, 18, -22,
+          2, 11, 19, -21, -1, 18, -14, 2, 18, 2, 10, 18, -6, 3, 11, 19, -9, -22, 18,
+          10, 2, 10, 18, -22, 2, -1, -17, 15, 11, -14, -22, 18, 10, 18, -22, -14,
+          10, -17, 15, -1, -5, -6, -14, -22, 18, -22, -14, -6, 18, 15, -1, -17, -21,
+          18, 10, 2, -6, 2, 10, 18, -6, 15, -1, -17, 27, -21, 19, 11, 3, -1, -17,
+          15, 15, -3, 5, 13, -3, -13, -21, 19, 11, -17, 15, -1, -1, 5, 13, -27, 5,
+          -5, -13, -21, 19, 15, -1, -17, -17, 13, -27, -19, 13, 15, 7, -1, -9, 11,
+          -5, -21, 27, -3, 5, 13, -3]
+        upper:
+          bounds: {local: '81'}
+          keywords: [facet-local]
+        keywords: [canonical, minimal, not-composite, not-io-lifted]

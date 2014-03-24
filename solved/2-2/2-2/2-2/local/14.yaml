@@ -1,0 +1,47 @@
+type: BellExpression
+scenario: '[(2 2) (2 2) (2 2)]'
+representation: Non-signaling Correlators
+coefficients:
+  numerator: [0, 0, 0, 0, 1, 1, 0, -1, -1, 0, -1, -1, 0, -1, 1, -2, 0, 0, 0, 1, 1,
+    -2, 0, 0, 0, 1, -1]
+  denominator: 4
+symmetries:
+  remarkableGenerators:
+    outputInputPerms: ['A1(1,2) A2(1,2) B(1,2) C(1,2)', 'A1(1,2) A2(1,2) B1(1,2) B2(1,2)
+        C1(1,2) C2(1,2) A(1,2)']
+    rest: ['A(1,2) B(1,2) C(1,2) (B,C)']
+  numberOfRepresentatives: 384
+upper:
+  bounds: {local: '1'}
+  keywords: [facet-local]
+keywords: [not-composite, not-io-lifted, not-minimal]
+names: ['Local facet in [(2 2) (2 2) (2 2)], solved by SymPol.']
+sources:
+  upper.keywords.facet-local: ['http://www.math.uni-rostock.de/~rehn/software/sympol.html']
+  upper.bounds.local: ['http://www.math.uni-rostock.de/~rehn/software/sympol.html']
+remarkableForms:
+  maximal:
+    type: PermutationTransform
+    permutation: A1(1,2) A2(1,2) B1(1,2) B2(1,2) A(1,2) (A,C,B)
+    of: {type: OriginalExpression}
+decomposition:
+  type: RepresentationTransform
+  representation: Non-signaling Correlators
+  of:
+    type: PermutationTransform
+    permutation: B2(1,2) C(1,2) (B,C)
+    of:
+      type: AffineTransform
+      affine: 1/4 * x
+      of:
+        type: BellExpression
+        scenario: '[(2 2) (2 2) (2 2)]'
+        representation: Non-signaling Probabilities
+        coefficients: [-2, 0, -2, 0, 1, 1, 1, 1, -2, 2, 0, 0, 1, -1, -1, 1, 1, 1,
+          1, 1, 0, -2, 0, -2, 1, -1, -1, 1, 0, 0, 2, -2, -1, 1, 1, -1, 2, -2, 0, 0,
+          1, 1, 1, 1, 0, -2, 0, -2, 0, 0, -2, 2, -1, 1, 1, -1, -2, 0, -2, 0, 1, 1,
+          1, 1]
+        upper:
+          bounds: {local: '4'}
+          keywords: [facet-local]
+        keywords: [canonical, minimal, not-composite, not-io-lifted]

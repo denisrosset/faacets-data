@@ -1,0 +1,48 @@
+type: BellExpression
+scenario: '[(3 2 2) (3 2)]'
+representation: Non-signaling Correlators
+coefficients:
+  numerator: [0, 2, 4, 0, 3, -4, -8, -16, 0, -12, -2, -4, -8, 0, -6, 3, 6, 12, 0,
+    -9]
+  denominator: 17
+symmetries:
+  remarkableGenerators:
+    liftings: ['B1(2,3)', 'A2(1,2)', 'A1(1,2)']
+  numberOfRepresentatives: 72
+upper:
+  bounds: {local: '1'}
+  keywords: [facet-local]
+keywords: [io-lifted, not-composite, not-minimal]
+names: ['Local facet in [(3 2 2) (3 2)], solved by SymPol.']
+sources:
+  upper.keywords.facet-local: ['http://www.math.uni-rostock.de/~rehn/software/sympol.html']
+  upper.bounds.local: ['http://www.math.uni-rostock.de/~rehn/software/sympol.html']
+remarkableForms:
+  maximal:
+    type: PermutationTransform
+    permutation: A1(1,2,3) A3(1,2) B2(1,2) A(2,3)
+    of: {type: OriginalExpression}
+decomposition:
+  type: RepresentationTransform
+  representation: Non-signaling Correlators
+  of:
+    type: ReorderingTransform
+    reordering: Reordering(A(2,3))
+    of:
+      type: LiftingTransform
+      lifting: Lifting([(2+(1 0) 2)+(2) (2+(0 1) 2)])
+      of:
+        type: PermutationTransform
+        permutation: A(1,2)
+        of:
+          type: AffineTransform
+          affine: 9/17 * x - 1/17
+          of:
+            type: BellExpression
+            scenario: '[(2 2) (2 2)]'
+            representation: Non-signaling Probabilities
+            coefficients: [-1, 1, -1, 1, 1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1]
+            upper:
+              bounds: {local: '2'}
+              keywords: [facet-local]
+            keywords: [canonical, minimal, not-composite, not-io-lifted]

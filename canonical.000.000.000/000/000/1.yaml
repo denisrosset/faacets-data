@@ -1,0 +1,9 @@
+type: BellExpression
+scenario: '[(2)]'
+representation: Non-signaling Probabilities
+coefficients: [0, 0]
+upper:
+  bounds: {local: '0', quantum: '0', no-signaling: '0'}
+keywords: [canonical, minimal, not-composite, not-io-lifted]
+shortName: Constant
+names: [Constant]

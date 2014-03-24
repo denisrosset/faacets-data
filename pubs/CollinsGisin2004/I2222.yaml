@@ -1,56 +1,42 @@
-type: Inequality
-bra:
-  scenario: '{[2 2] [2 2]}'
-  representation: Non-signaling Collins-Gisin
-  coefficients: [0, -1, 0, -1, 1, 1, 0, 1, -1]
-symmetryInfo:
+type: BellExpression
+scenario: '[(2 2) (2 2)]'
+representation: Non-signaling Collins-Gisin
+coefficients: [0, -1, 0, -1, 1, 1, 0, 1, -1]
+symmetries:
   remarkableGenerators:
     outputPerms: ['A1(1,2) A2(1,2) B1(1,2) B2(1,2)']
     outputInputPerms: ['A2(1,2) B(1,2)', 'B2(1,2) A(1,2)']
     partyPerms: ['(A,B)']
   numberOfRepresentatives: 8
-  orderOfLiftingSymmetryGroups: 1
-  orderOfOutputSymmetryGroup: 2
-  orderOfOutputInputSymmetryGroup: 8
-  orderOfPartySymmetryGroup: 2
-tags: [pure, simple]
+upper:
+  bounds: {local: '0'}
+  keywords: [facet-local]
+keywords: [not-composite, not-io-lifted, not-minimal]
 shortName: I2222
 names: ['I2222, defined in Collins, Gisin 2004.']
-facetOf: {local: true}
-bounds: {local: x <= 0}
 sources:
-  bounds.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
-  facetOf.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+  upper.bounds.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+  upper.keywords.facet-local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+remarkableForms:
+  maximal:
+    type: PermutationTransform
+    permutation: ''
+    of: {type: OriginalExpression}
 decomposition:
   type: RepresentationTransform
   representation: Non-signaling Collins-Gisin
   of:
-    type: AffineTransform
-    affine: 1/4 x - 1/2
+    type: PermutationTransform
+    permutation: A1(1,2) A2(1,2)
     of:
-      type: PermutationTransform
-      permutation: A1(1,2) A2(1,2)
+      type: AffineTransform
+      affine: 1/4 * x - 1/2
       of:
-        type: Inequality
-        bra:
-          scenario: '{[2 2] [2 2]}'
-          representation: Non-signaling Probabilities
-          coefficients: [-1, 1, -1, 1, 1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1]
-        symmetryInfo:
-          remarkableGenerators:
-            outputPerms: ['A1(1,2) A2(1,2) B1(1,2) B2(1,2)']
-            outputInputPerms: ['A2(1,2) B(1,2)', 'B2(1,2) A(1,2)']
-            partyPerms: ['(A,B)']
-          numberOfRepresentatives: 8
-          orderOfLiftingSymmetryGroups: 1
-          orderOfOutputSymmetryGroup: 2
-          orderOfOutputInputSymmetryGroup: 8
-          orderOfPartySymmetryGroup: 2
-        tags: [pure, simple, minimal]
-        shortName: I2222
-        names: ['I2222, defined in Collins, Gisin 2004.']
-        facetOf: {local: true}
-        bounds: {local: x <= 2}
-        sources:
-          bounds.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
-          facetOf.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+        type: BellExpression
+        scenario: '[(2 2) (2 2)]'
+        representation: Non-signaling Probabilities
+        coefficients: [-1, 1, -1, 1, 1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1]
+        upper:
+          bounds: {local: '2'}
+          keywords: [facet-local]
+        keywords: [canonical, minimal, not-composite, not-io-lifted]

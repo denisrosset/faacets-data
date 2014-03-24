@@ -1,56 +1,43 @@
-type: Inequality
-bra:
-  scenario: '{[2 2] [2 2] [2 2]}'
-  representation: Non-signaling Correlators
-  coefficients: [3, -1, 0, -1, -1, 0, 0, 0, 0, -1, 0, -1, 0, 1, 1, -1, 1, 0, 0, -1,
-    1, 1, 0, -1, -1, 1, 0]
-symmetryInfo:
+type: BellExpression
+scenario: '[(2 2) (2 2) (2 2)]'
+representation: Non-signaling Correlators
+coefficients: [3, -1, 0, -1, -1, 0, 0, 0, 0, -1, 0, -1, 0, 1, 1, -1, 1, 0, 0, -1,
+  1, 1, 0, -1, -1, 1, 0]
+symmetries:
   remarkableGenerators:
     rest: ['C2(1,2) (A,B)']
   numberOfRepresentatives: 1536
-  orderOfLiftingSymmetryGroups: 1
-  orderOfOutputSymmetryGroup: 1
-  orderOfOutputInputSymmetryGroup: 1
-  orderOfPartySymmetryGroup: 1
-tags: [pure, simple]
+lower:
+  bounds: {local: '0'}
+  keywords: [facet-local]
+keywords: [not-composite, not-io-lifted, not-minimal]
 names: ['C. Sliwa 2003, tripartite inequality #6']
-facetOf: {local: true}
-bounds: {local: x >= 0}
 sources:
-  facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
-  bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+  lower.keywords.facet-local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+  lower.bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+remarkableForms:
+  maximal:
+    type: PermutationTransform
+    permutation: A1(1,2) B2(1,2) B(1,2) C(1,2) (A,B)
+    of: {type: OriginalExpression}
 decomposition:
   type: RepresentationTransform
   representation: Non-signaling Correlators
   of:
-    type: ReverseTransform
+    type: PermutationTransform
+    permutation: A1(1,2) (A,C)
     of:
       type: AffineTransform
-      affine: 1/4 x - 3
+      affine: 1/4 * x + 3
       of:
-        type: PermutationTransform
-        permutation: A1(1,2) B1(1,2) A(1,2) C(1,2) (A,B)
-        of:
-          type: Inequality
-          bra:
-            scenario: '{[2 2] [2 2] [2 2]}'
-            representation: Non-signaling Probabilities
-            coefficients: [-9, 3, -6, 0, 5, 1, 4, 2, -4, 0, 1, -5, 0, 4, -3, 7, 7,
-              -5, 2, 0, -3, 1, 4, -6, 4, 0, 1, 3, 0, -4, 5, -9, -6, 6, 3, -3, 4, 0,
-              1, 3, 1, 5, 0, 6, -3, 1, 4, -6, 4, -8, -7, 3, -2, 2, 7, -7, -1, -5,
-              2, -8, 3, -1, -2, 4]
-          symmetryInfo:
-            remarkableGenerators:
-              rest: ['A1(1,2) A2(1,2) B1(1,2) B2(1,2) C1(1,2) A(1,2) B(1,2) (A,B)']
-            numberOfRepresentatives: 1536
-            orderOfLiftingSymmetryGroups: 1
-            orderOfOutputSymmetryGroup: 1
-            orderOfOutputInputSymmetryGroup: 1
-            orderOfPartySymmetryGroup: 1
-          tags: [pure, simple, minimal]
-          names: ['C. Sliwa 2003, tripartite inequality #6']
-          facetOf: {local: true}
-          bounds: {local: x <= 12}
-          sources:
-            facetOf.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
-            bounds.local: ['doi:10.1016/S0375-9601(03)01115-0', 'arXiv:quant-ph/0305190']
+        type: BellExpression
+        scenario: '[(2 2) (2 2) (2 2)]'
+        representation: Non-signaling Probabilities
+        coefficients: [-7, -1, -4, -4, 7, -3, -2, 6, -2, 0, -1, -1, 2, -4, -5, 3,
+          7, -3, 6, -2, -3, 3, 0, 0, 8, -6, -3, 5, -4, 6, 9, -7, -2, 0, -1, -1, 8,
+          -6, 5, -3, 5, -5, 0, 0, 1, -1, 4, -4, 2, -4, 3, -5, -4, 6, -7, 9, 1, -1,
+          -4, 4, -3, 3, 0, 0]
+        lower:
+          bounds: {local: '-12'}
+          keywords: [facet-local]
+        keywords: [canonical, minimal, not-composite, not-io-lifted]

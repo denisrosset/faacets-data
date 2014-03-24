@@ -1,58 +1,45 @@
-type: Inequality
-bra:
-  scenario: '{[2 2 2 2] [2 2 2 2]}'
-  representation: Non-signaling Collins-Gisin
-  coefficients: [0, -1, 0, 0, 0, -3, 1, 1, 1, 1, -2, 1, 1, 1, -1, -1, 1, 1, -1, 0,
-    0, 1, -1, 0, 0]
-symmetryInfo:
+type: BellExpression
+scenario: '[(2 2 2 2) (2 2 2 2)]'
+representation: Non-signaling Collins-Gisin
+coefficients: [0, -1, 0, 0, 0, -3, 1, 1, 1, 1, -2, 1, 1, 1, -1, -1, 1, 1, -1, 0, 0,
+  1, -1, 0, 0]
+symmetries:
   remarkableGenerators:
     outputInputPerms: ['A4(1,2) B(1,2)', 'B4(1,2) A(1,2)']
     rest: ['A1(1,2) A2(1,2) A3(1,2) B1(1,2) B2(1,2) B3(1,2) A(1,2) B(1,2) (A,B)']
   numberOfRepresentatives: 36864
-  orderOfLiftingSymmetryGroups: 1
-  orderOfOutputSymmetryGroup: 1
-  orderOfOutputInputSymmetryGroup: 4
-  orderOfPartySymmetryGroup: 1
-tags: [pure, simple]
+upper:
+  bounds: {local: '0'}
+  keywords: [facet-local]
+keywords: [not-composite, not-io-lifted, not-minimal]
 shortName: I4422
 names: ['I4422, defined in Collins, Gisin 2004.']
-facetOf: {local: true}
-bounds: {local: x <= 0}
 sources:
-  bounds.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
-  facetOf.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+  upper.bounds.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+  upper.keywords.facet-local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+remarkableForms:
+  maximal:
+    type: PermutationTransform
+    permutation: A1(1,2) A2(1,2) A3(1,2) A4(1,2) B1(1,2) B3(1,2) A(1,4)(2,3)
+    of: {type: OriginalExpression}
 decomposition:
   type: RepresentationTransform
   representation: Non-signaling Collins-Gisin
   of:
-    type: AffineTransform
-    affine: 1/16 x - 7/4
+    type: PermutationTransform
+    permutation: A1(1,2) A2(1,2) A3(1,2) A4(1,2)
     of:
-      type: PermutationTransform
-      permutation: A1(1,2) A2(1,2) A3(1,2) A4(1,2)
+      type: AffineTransform
+      affine: 1/16 * x - 7/4
       of:
-        type: Inequality
-        bra:
-          scenario: '{[2 2 2 2] [2 2 2 2]}'
-          representation: Non-signaling Probabilities
-          coefficients: [-8, 4, -8, 4, -7, 3, -6, 2, 4, 0, 4, 0, 5, -1, 6, -2, -8,
-            4, -8, 4, -7, 3, 2, -6, 4, 0, 4, 0, 5, -1, -2, 6, -7, 5, -7, 5, 2, -4,
-            -1, -1, 3, -1, 3, -1, -4, 6, 1, 1, -6, 6, 2, -2, -1, 1, 0, 0, 2, -2, -6,
-            6, -1, 1, 0, 0]
-        symmetryInfo:
-          remarkableGenerators:
-            outputInputPerms: ['A4(1,2) B(1,2)', 'B4(1,2) A(1,2)']
-            partyPerms: ['(A,B)']
-          numberOfRepresentatives: 36864
-          orderOfLiftingSymmetryGroups: 1
-          orderOfOutputSymmetryGroup: 1
-          orderOfOutputInputSymmetryGroup: 4
-          orderOfPartySymmetryGroup: 2
-        tags: [pure, simple, minimal]
-        shortName: I4422
-        names: ['I4422, defined in Collins, Gisin 2004.']
-        facetOf: {local: true}
-        bounds: {local: x <= 28}
-        sources:
-          bounds.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
-          facetOf.local: ['doi:10.1088/0305-4470/37/5/021', 'arXiv:quant-ph/0306129']
+        type: BellExpression
+        scenario: '[(2 2 2 2) (2 2 2 2)]'
+        representation: Non-signaling Probabilities
+        coefficients: [-8, 4, -8, 4, -7, 3, -6, 2, 4, 0, 4, 0, 5, -1, 6, -2, -8, 4,
+          -8, 4, -7, 3, 2, -6, 4, 0, 4, 0, 5, -1, -2, 6, -7, 5, -7, 5, 2, -4, -1,
+          -1, 3, -1, 3, -1, -4, 6, 1, 1, -6, 6, 2, -2, -1, 1, 0, 0, 2, -2, -6, 6,
+          -1, 1, 0, 0]
+        upper:
+          bounds: {local: '28'}
+          keywords: [facet-local]
+        keywords: [canonical, minimal, not-composite, not-io-lifted]

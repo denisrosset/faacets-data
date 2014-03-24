@@ -1,0 +1,68 @@
+type: BellExpression
+scenario: '[(2 2) (2 2) (2 2)]'
+representation: Non-signaling Correlators
+coefficients:
+  numerator: [0, 0, 0, 0, 0, 0, -2, 0, 0, 0, -1, -1, 0, 0, 0, 0, -1, -1, 0, 1, -1,
+    0, 0, 0, 0, 1, -1]
+  denominator: 2
+symmetries:
+  remarkableGenerators:
+    liftings: ['B1(1,2)']
+    outputPerms: ['A1(1,2) A2(1,2) C1(1,2) C2(1,2)']
+    outputInputPerms: ['A1(1,2) C(1,2)', 'C2(1,2) A(1,2)']
+    rest: ['A(1,2) C(1,2) (A,C)']
+  numberOfRepresentatives: 96
+upper:
+  bounds: {local: '1'}
+  keywords: [facet-local]
+keywords: [composite, io-lifted, not-minimal]
+names: ['Local facet in [(2 2) (2 2) (2 2)], solved by SymPol.']
+sources:
+  upper.keywords.facet-local: ['http://www.math.uni-rostock.de/~rehn/software/sympol.html']
+  upper.bounds.local: ['http://www.math.uni-rostock.de/~rehn/software/sympol.html']
+remarkableForms:
+  maximal:
+    type: PermutationTransform
+    permutation: B2(1,2) C2(1,2) B(1,2) (B,C)
+    of: {type: OriginalExpression}
+decomposition:
+  type: RepresentationTransform
+  representation: Non-signaling Correlators
+  of:
+    type: ReorderingTransform
+    reordering: Reordering(B(1,2))
+    of:
+      type: LiftingTransform
+      lifting: Lifting([(2 2) (2)+(2) (2 2)])
+      of:
+        type: AffineTransform
+        affine: 1/2 * x + 1
+        of:
+          type: ReorderingTransform
+          reordering: Reordering((A,B))
+          of:
+            type: BellExpressionProduct
+            of:
+            - type: PermutationTransform
+              permutation: A1(1,2)
+              of:
+                type: AffineTransform
+                affine: x + 1
+                of:
+                  type: BellExpression
+                  scenario: '[(2)]'
+                  representation: Non-signaling Probabilities
+                  coefficients: [-1, 1]
+                  keywords: [canonical, minimal, not-composite, not-io-lifted]
+            - type: PermutationTransform
+              permutation: A(1,2)
+              of:
+                type: AffineTransform
+                affine: x - 2
+                of:
+                  type: BellExpression
+                  scenario: '[(2 2) (2 2)]'
+                  representation: Non-signaling Probabilities
+                  coefficients: [-1, 1, -1, 1, 1, -1, 1, -1, -1, 1, 1, -1, 1, -1,
+                    -1, 1]
+                  keywords: [canonical, minimal, not-composite, not-io-lifted]

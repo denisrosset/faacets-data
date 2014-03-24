@@ -1,0 +1,47 @@
+type: BellExpression
+scenario: '[(3 3) (3 2 2)]'
+representation: Non-signaling Correlators
+coefficients:
+  numerator: [0, -1, -2, -4, -8, 4, 4, 8, 4, 8, 2, 2, 4, 2, 4, -3, -3, 3, -3, -6,
+    -3, 6, 3, -3, -6]
+  denominator: 16
+symmetries:
+  remarkableGenerators:
+    liftings: ['B1(2,3)', 'A2(1,2)']
+    outputInputPerms: ['A1(1,2) B(2,3)']
+  numberOfRepresentatives: 432
+upper:
+  bounds: {local: '1'}
+  keywords: [facet-local]
+keywords: [io-lifted, not-composite, not-minimal]
+names: ['Local facet in [(3 3) (3 2 2)], solved by SymPol.']
+sources:
+  upper.keywords.facet-local: ['http://www.math.uni-rostock.de/~rehn/software/sympol.html']
+  upper.bounds.local: ['http://www.math.uni-rostock.de/~rehn/software/sympol.html']
+remarkableForms:
+  maximal:
+    type: PermutationTransform
+    permutation: B2(1,2)
+    of: {type: OriginalExpression}
+decomposition:
+  type: RepresentationTransform
+  representation: Non-signaling Correlators
+  of:
+    type: LiftingTransform
+    lifting: Lifting([(3 2+(1 0)) (2+(0 1) 2 2)])
+    of:
+      type: PermutationTransform
+      permutation: A1(1,3,2) A2(1,2)
+      of:
+        type: AffineTransform
+        affine: 3/64 * x + 5/32
+        of:
+          type: BellExpression
+          scenario: '[(3 2) (2 2 2)]'
+          representation: Non-signaling Probabilities
+          coefficients: [-7, 5, 5, -3, 5, 7, -5, -5, 7, -9, -5, -5, 7, 7, -9, 5, 5,
+            -7, -3, 5, -5, 7, -5, 7, -9, 5, -7, 5, -3, 5]
+          upper:
+            bounds: {local: '18'}
+            keywords: [facet-local]
+          keywords: [canonical, minimal, not-composite, not-io-lifted]

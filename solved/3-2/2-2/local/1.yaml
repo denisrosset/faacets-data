@@ -1,0 +1,55 @@
+type: BellExpression
+scenario: '[(3 2) (2 2)]'
+representation: Non-signaling Correlators
+coefficients: [0, 0, 0, -1, 0, 0, 0, 0, -1, 0, 0, -1]
+symmetries:
+  remarkableGenerators:
+    liftings: ['B1(1,2)', 'A1(1,2)', 'A1(2,3)']
+  numberOfRepresentatives: 8
+upper:
+  bounds: {local: '1'}
+  keywords: [facet-local]
+keywords: [composite, io-lifted, not-minimal]
+names: ['Local facet in [(3 2) (2 2)], solved by SymPol.']
+sources:
+  upper.keywords.facet-local: ['http://www.math.uni-rostock.de/~rehn/software/sympol.html']
+  upper.bounds.local: ['http://www.math.uni-rostock.de/~rehn/software/sympol.html']
+remarkableForms:
+  maximal:
+    type: PermutationTransform
+    permutation: B2(1,2) B(1,2)
+    of: {type: OriginalExpression}
+decomposition:
+  type: RepresentationTransform
+  representation: Non-signaling Correlators
+  of:
+    type: ReorderingTransform
+    reordering: Reordering(A(1,2) B(1,2))
+    of:
+      type: LiftingTransform
+      lifting: Lifting([(2)+(3) (2)+(2)])
+      of:
+        type: AffineTransform
+        affine: x + 1
+        of:
+          type: BellExpressionProduct
+          of:
+          - type: PermutationTransform
+            permutation: A1(1,2)
+            of:
+              type: AffineTransform
+              affine: x + 1
+              of:
+                type: BellExpression
+                scenario: '[(2)]'
+                representation: Non-signaling Probabilities
+                coefficients: [-1, 1]
+                keywords: [canonical, minimal, not-composite, not-io-lifted]
+          - type: AffineTransform
+            affine: x - 1
+            of:
+              type: BellExpression
+              scenario: '[(2)]'
+              representation: Non-signaling Probabilities
+              coefficients: [-1, 1]
+              keywords: [canonical, minimal, not-composite, not-io-lifted]
