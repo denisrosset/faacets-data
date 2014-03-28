@@ -32,15 +32,4 @@ decomposition:
     of:
       type: AffineTransform
       affine: 1/8 * x
-      of:
-        type: BellExpression
-        scenario: '[(2 2) (2 2) (2 2)]'
-        representation: Non-signaling Probabilities
-        coefficients: [-5, 1, -5, 1, 2, 0, 4, -2, -5, 1, 1, -5, 2, 0, -2, 4, 4, -2,
-          2, 0, -1, 1, -1, 1, 4, -2, 0, 2, -1, 1, 1, -1, -2, 4, 2, 0, 1, -1, -1, 1,
-          -2, 4, 0, 2, 1, -1, 1, -1, 1, -5, -5, 1, 0, 2, 4, -2, 1, -5, 1, -5, 0, 2,
-          -2, 4]
-        upper:
-          bounds: {local: '8'}
-          keywords: [facet-local]
-        keywords: [canonical, minimal, not-composite, not-io-lifted]
+      of: {type: CanonicalExpression, index: 26}

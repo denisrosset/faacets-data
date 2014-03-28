@@ -31,15 +31,4 @@ decomposition:
     of:
       type: AffineTransform
       affine: 1/20 * x
-      of:
-        type: BellExpression
-        scenario: '[(2 2) (2 2) (2 2)]'
-        representation: Non-signaling Probabilities
-        coefficients: [-14, 4, -14, 4, 7, -3, 9, -5, -8, 2, 6, -12, 1, -1, -11, 11,
-          9, -5, 7, -3, -2, 4, -2, 4, 5, -1, -3, 7, 2, 0, 8, -6, -11, 11, 1, -1, 8,
-          -6, 2, 0, -5, 9, 1, 3, 2, -4, 2, -4, 6, -12, -8, 2, -3, 7, 5, -1, 2, -8,
-          2, -8, 1, 3, -5, 9]
-        upper:
-          bounds: {local: '20'}
-          keywords: [facet-local]
-        keywords: [canonical, minimal, not-composite, not-io-lifted]
+      of: {type: CanonicalExpression, index: 49}
