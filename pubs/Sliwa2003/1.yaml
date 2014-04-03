@@ -26,7 +26,7 @@ decomposition:
   representation: Non-signaling Correlators
   of:
     type: LiftingTransform
-    lifting: Lifting([(2)+(2) (2)+(2) (2)+(2)])
+    lifting: [(2)+(2) (2)+(2) (2)+(2)]
     of:
       type: BellExpressionProduct
       of:

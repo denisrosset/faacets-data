@@ -26,7 +26,7 @@ decomposition:
   representation: Non-signaling Correlators
   of:
     type: LiftingTransform
-    lifting: Lifting([(2+(0 1))+(3) (2+(0 1))+(2 2)])
+    lifting: [(2+(0 1))+(3) (2+(0 1))+(2 2)]
     of:
       type: AffineTransform
       affine: 9/4 * x + 1

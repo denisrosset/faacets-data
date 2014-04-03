@@ -30,16 +30,16 @@ decomposition:
   representation: Non-signaling Correlators
   of:
     type: ReorderingTransform
-    reordering: Reordering(B(1,2))
+    reordering: B(1,2)
     of:
       type: LiftingTransform
-      lifting: Lifting([(2 2) (2)+(2) (2 2)])
+      lifting: [(2 2) (2)+(2) (2 2)]
       of:
         type: AffineTransform
         affine: 1/2 * x + 1
         of:
           type: ReorderingTransform
-          reordering: Reordering((A,B))
+          reordering: (A,B)
           of:
             type: BellExpressionProduct
             of:

@@ -31,10 +31,10 @@ decomposition:
     permutation: A1(2,3)
     of:
       type: LiftingTransform
-      lifting: Lifting([(2+(1 0) 2 2) (3 2)])
+      lifting: [(2+(1 0) 2 2) (3 2)]
       of:
         type: ReorderingTransform
-        reordering: Reordering((A,B))
+        reordering: (A,B)
         of:
           type: PermutationTransform
           permutation: A2(1,2) B(1,2)

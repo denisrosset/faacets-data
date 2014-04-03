@@ -30,7 +30,7 @@ decomposition:
     permutation: B1(2,3)
     of:
       type: LiftingTransform
-      lifting: Lifting([(2+(1 0) 2+(1 0)) (2+(1 0) 2)+(2)])
+      lifting: [(2+(1 0) 2+(1 0)) (2+(1 0) 2)+(2)]
       of:
         type: PermutationTransform
         permutation: A2(1,2) A(1,2)

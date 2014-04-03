@@ -29,7 +29,7 @@ decomposition:
   representation: Non-signaling Correlators
   of:
     type: LiftingTransform
-    lifting: Lifting([(3 3) (2+(0 1) 2 2)])
+    lifting: [(3 3) (2+(0 1) 2 2)]
     of:
       type: PermutationTransform
       permutation: A2(1,2) B3(1,2) A(1,2) B(1,2,3)

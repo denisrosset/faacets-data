@@ -29,10 +29,10 @@ decomposition:
   representation: Non-signaling Correlators
   of:
     type: ReorderingTransform
-    reordering: Reordering(A(2,3))
+    reordering: A(2,3)
     of:
       type: LiftingTransform
-      lifting: Lifting([(2 2)+(2) (2 2)+(2)])
+      lifting: [(2 2)+(2) (2 2)+(2)]
       of:
         type: PermutationTransform
         permutation: A2(1,2)
