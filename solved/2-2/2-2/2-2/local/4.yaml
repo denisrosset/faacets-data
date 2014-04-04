@@ -33,7 +33,7 @@ decomposition:
     reordering: B(1,2)
     of:
       type: LiftingTransform
-      lifting: [(2 2) (2)+(2) (2 2)]
+      lifting: '[(2 2) (2)+(2) (2 2)]'
       of:
         type: AffineTransform
         affine: 1/2 * x + 1

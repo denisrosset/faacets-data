@@ -30,8 +30,8 @@ decomposition:
       type: AffineTransform
       affine: x + 8
       of:
-        type: OppositeTransform
+        type: PermutationTransform
+        permutation: A1(1,2) C2(1,2) B(1,2) (A,C)
         of:
-          type: PermutationTransform
-          permutation: A1(1,2) C2(1,2) B(1,2) (A,C)
+          type: OppositeTransform
           of: {type: CanonicalExpression, index: 47}

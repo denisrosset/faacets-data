@@ -31,8 +31,8 @@ decomposition:
       type: AffineTransform
       affine: 1/2 * x + 4
       of:
-        type: OppositeTransform
+        type: PermutationTransform
+        permutation: C1(1,2) C2(1,2) (A,B)
         of:
-          type: PermutationTransform
-          permutation: C1(1,2) C2(1,2) (A,B)
+          type: OppositeTransform
           of: {type: CanonicalExpression, index: 26}

@@ -28,7 +28,7 @@ decomposition:
     reordering: B(1,2)
     of:
       type: LiftingTransform
-      lifting: [(2+(0 1))+(2) (2)+(2 2)]
+      lifting: '[(2+(0 1))+(2) (2)+(2 2)]'
       of:
         type: AffineTransform
         affine: 3/2 * x + 1

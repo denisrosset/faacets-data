@@ -29,7 +29,7 @@ decomposition:
     reordering: A(1,2) B(1,2) C(1,2)
     of:
       type: LiftingTransform
-      lifting: [(2)+(2) (2)+(2) (2)+(2)]
+      lifting: '[(2)+(2) (2)+(2) (2)+(2)]'
       of:
         type: AffineTransform
         affine: x + 1

@@ -32,7 +32,7 @@ decomposition:
     reordering: A(2,3)
     of:
       type: LiftingTransform
-      lifting: [(2 2)+(2) (2 2)+(2)]
+      lifting: '[(2 2)+(2) (2 2)+(2)]'
       of:
         type: PermutationTransform
         permutation: A2(1,2)
