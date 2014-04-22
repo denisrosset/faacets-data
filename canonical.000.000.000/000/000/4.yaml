@@ -10,7 +10,7 @@ upper:
   keywords: [facet-local]
   bounds:
     local: 12
-    quantum: '([0.250875384514, 0.25087539] + 1)/12'
+    quantum: '([0.250875384514, 0.25087539] + 1)*12'
 sources:
   upper.bounds.local: ['doi:10.1007/BF02903286']
   bounds.quantum: ['doi:10.1103/PhysRevA.82.022116', 'arXiv:1006.3032']
